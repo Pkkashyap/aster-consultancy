@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aster Consultancy Services | HR, Recruitment & Healthcare Staffing</title>
+<meta name="description" content="Aster Consultancy Services connects employers with doctors, nurses, HR professionals and skilled staff. Recruitment and HR consultancy you can rely on.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#16235E;
+  --navy-deep:#0D1640;
+  --crimson:#C41E3A;
+  --crimson-soft:#F7E3E7;
+  --mist:#EEF1F8;
+  --ink:#1B2140;
+  --muted:#5A6283;
+  --line:#D6DBEA;
+  --white:#FFFFFF;
+  --display:"Bricolage Grotesque", system-ui, sans-serif;
+  --body:"Figtree", system-ui, sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{font-family:var(--body);color:var(--ink);background:var(--white);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--crimson);outline-offset:3px;border-radius:4px}
+.wrap{width:min(1160px,100% - 40px);margin-inline:auto}
+h1,h2,h3{font-family:var(--display);line-height:1.08;letter-spacing:-.02em;color:var(--navy)}
+h2{font-size:clamp(2rem,4vw,3rem);font-weight:800;max-width:18ch}
+.lead{font-size:1.15rem;color:var(--muted);max-width:56ch}
+
+/* Header */
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.mark{width:42px;height:42px;border-radius:50%;border:2.5px solid var(--navy);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:800;font-size:13px;color:var(--navy);white-space:nowrap;letter-spacing:-.04em;flex-shrink:0}
+.mark span{color:var(--crimson)}
+.brand-name{font-family:var(--display);font-weight:700;font-size:1.05rem;color:var(--navy);line-height:1.1}
+.brand-name small{display:block;font-family:var(--body);font-weight:500;font-size:.75rem;color:var(--muted);letter-spacing:.01em}
+.nav-links{display:flex;gap:28px;align-items:center;list-style:none}
+.nav-links a{text-decoration:none;font-weight:500;color:var(--ink);font-size:.97rem}
+.nav-links a:hover{color:var(--crimson)}
+.nav-links .btn-primary,.nav-links .btn-primary:hover{color:var(--white)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:999px;font-weight:600;text-decoration:none;font-size:.97rem;border:2px solid transparent;cursor:pointer;font-family:var(--body)}
+.btn-primary{background:var(--crimson);color:var(--white)}
+.btn-primary:hover{background:#A5182F}
+.btn-ghost{border-color:var(--navy);color:var(--navy)}
+.btn-ghost:hover{background:var(--navy);color:var(--white)}
+.menu-toggle{display:none;background:none;border:0;font-size:1.6rem;color:var(--navy);cursor:pointer}
+
+/* Hero */
+.hero{background:var(--navy);color:var(--white);overflow:hidden;position:relative}
+.hero::after{content:"";position:absolute;right:-180px;top:-180px;width:560px;height:560px;border-radius:50%;border:70px solid rgba(196,30,58,.9);pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;padding:96px 0 104px;position:relative;z-index:1}
+.hero h1{color:var(--white);font-size:clamp(2.6rem,6vw,4.6rem);font-weight:800;max-width:13ch}
+.hero p{color:#C9D0EA;font-size:1.2rem;margin:24px 0 36px;max-width:46ch}
+.hero .btn-ghost{border-color:rgba(255,255,255,.6);color:var(--white)}
+.hero .btn-ghost:hover{background:var(--white);color:var(--navy)}
+.actions{display:flex;flex-wrap:wrap;gap:14px}
+
+/* Placement board: the one memorable element */
+.board{background:var(--white);color:var(--ink);border-radius:20px;padding:26px;box-shadow:0 30px 60px -20px rgba(5,10,40,.55)}
+.board h3{font-size:1.05rem;font-weight:700;display:flex;justify-content:space-between;align-items:center}
+.live{font-family:var(--body);font-size:.8rem;font-weight:600;color:var(--crimson);display:flex;align-items:center;gap:6px}
+.live::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--crimson);animation:pulse 1.6s infinite}
+@keyframes pulse{50%{opacity:.25}}
+.board ul{list-style:none;margin-top:16px}
+.board li{display:grid;grid-template-columns:1fr auto;gap:4px 12px;padding:14px 0;border-top:1px solid var(--line)}
+.board li:first-child{border-top:0}
+.role{font-weight:600}
+.where{grid-column:1;font-size:.88rem;color:var(--muted)}
+.tag{grid-row:1/3;grid-column:2;align-self:center;font-size:.8rem;font-weight:600;padding:5px 12px;border-radius:999px;background:var(--mist);color:var(--navy)}
+.tag.hot{background:var(--crimson-soft);color:var(--crimson)}
+.hero .board-note{margin:14px 0 0;font-size:.85rem;color:var(--muted)}
+
+/* Sections */
+section{padding:104px 0}
+.section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap;margin-bottom:56px}
+
+/* Services */
+.services{display:grid;grid-template-columns:repeat(12,1fr);gap:20px}
+.svc{border:1px solid var(--line);border-radius:18px;padding:34px;background:var(--white)}
+.svc.feature{grid-column:span 7;background:var(--navy);color:var(--white);border-color:var(--navy)}
+.svc.feature h3{color:var(--white)}
+.svc.feature p{color:#C9D0EA}
+.svc.side{grid-column:span 5}
+.svc.third{grid-column:span 4}
+.svc h3{font-size:1.5rem;font-weight:700;margin:18px 0 10px}
+.svc p{color:var(--muted)}
+.icon{width:48px;height:48px;border-radius:12px;display:grid;place-items:center;background:var(--crimson-soft);color:var(--crimson)}
+.svc.feature .icon{background:var(--crimson);color:var(--white)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px;list-style:none}
+.chips li{font-size:.85rem;padding:6px 13px;border-radius:999px;border:1px solid rgba(255,255,255,.3)}
+.svc:not(.feature) .chips li{border-color:var(--line);color:var(--ink)}
+
+/* Audience split */
+.split-sec{background:var(--mist)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.aud{background:var(--white);border-radius:22px;padding:44px}
+.aud h3{font-size:1.9rem;font-weight:800;margin-bottom:12px}
+.aud ul{list-style:none;margin:26px 0 32px}
+.aud li{padding:12px 0 12px 34px;border-top:1px solid var(--line);position:relative}
+.aud li::before{content:"";position:absolute;left:4px;top:19px;width:14px;height:8px;border-left:2.5px solid var(--crimson);border-bottom:2.5px solid var(--crimson);transform:rotate(-45deg)}
+
+/* Process (a real sequence, so numbered) */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:s;border-top:2px solid var(--navy)}
+.step{padding:30px 26px 0 0;counter-increment:s}
+.step::before{content:counter(s);display:block;font-family:var(--display);font-weight:800;font-size:3.2rem;color:var(--crimson);line-height:1;margin-bottom:14px}
+.step h3{font-size:1.2rem;font-weight:700;margin-bottom:8px}
+.step p{color:var(--muted);font-size:.97rem}
+
+/* Why */
+.why{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:start}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.fact{border-left:3px solid var(--crimson);padding:4px 0 4px 20px}
+.fact h3{font-size:1.15rem;margin-bottom:6px}
+.fact p{color:var(--muted);font-size:.97rem}
+
+/* Contact */
+.contact{background:var(--navy-deep);color:var(--white)}
+.contact h2{color:var(--white)}
+.contact .lead{color:#C9D0EA;margin-top:18px}
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+.details{list-style:none;margin-top:36px}
+.details li{padding:16px 0;border-top:1px solid rgba(255,255,255,.15)}
+.details span{display:block;font-size:.85rem;color:#9AA3C7}
+.details a{text-decoration:none;font-weight:600;font-size:1.1rem}
+.details a:hover{color:#FF8A9E}
+form{background:var(--white);color:var(--ink);border-radius:22px;padding:36px;display:grid;gap:16px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+label{font-weight:600;font-size:.9rem;display:grid;gap:6px}
+input,select,textarea{font:inherit;font-weight:400;padding:12px 14px;border:1.5px solid var(--line);border-radius:10px;background:var(--white);color:var(--ink);width:100%}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--navy);box-shadow:0 0 0 3px rgba(22,35,94,.15)}
+textarea{min-height:120px;resize:vertical}
+form .btn{justify-self:start}
+.form-note{font-size:.85rem;color:var(--muted)}
+
+footer{background:var(--navy-deep);color:#9AA3C7;border-top:1px solid rgba(255,255,255,.1);padding:28px 0;font-size:.9rem}
+.foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+/* Responsive */
+@media (max-width:960px){
+  .hero-grid,.why,.contact-grid,.split{grid-template-columns:1fr}
+  .svc.feature,.svc.side,.svc.third{grid-column:span 12}
+  .steps{grid-template-columns:1fr 1fr;gap:0 24px}
+  .hero::after{width:380px;height:380px;border-width:48px;right:-200px;top:-140px}
+}
+@media (max-width:760px){
+  .nav-links{display:none;position:absolute;top:72px;left:0;right:0;background:var(--white);flex-direction:column;align-items:flex-start;padding:20px;gap:18px;border-bottom:1px solid var(--line)}
+  .nav-links.open{display:flex}
+  .menu-toggle{display:block}
+  section{padding:72px 0}
+  .hero-grid{padding:64px 0 72px}
+  .facts,.row,.steps{grid-template-columns:1fr}
+  .aud,form,.svc{padding:26px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap nav" aria-label="Main">
+    <a class="brand" href="#top" aria-label="Aster Consultancy Services home">
+      <div class="mark" aria-hidden="true">A<span>C</span>S</div>
+      <div class="brand-name">Aster Consultancy<small>Services</small></div>
+    </a>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="links">&#9776;</button>
+    <ul class="nav-links" id="links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#employers">Employers</a></li>
+      <li><a href="#candidates">Candidates</a></li>
+      <li><a href="#process">How it works</a></li>
+      <li><a class="btn btn-primary" href="#contact">Contact us</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero" style="padding:0">
+    <div class="wrap hero-grid">
+      <div>
+        <h1>The right people, placed where they matter.</h1>
+        <p>Aster Consultancy Services finds doctors, nurses, HR professionals and skilled staff for organisations that can't afford a wrong hire.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#contact">Hire with us</a>
+          <a class="btn btn-ghost" href="#candidates">Find a job</a>
+        </div>
+      </div>
+      <aside class="board" aria-label="Roles we recruit for">
+        <h3>Roles we fill <span class="live">Hiring now</span></h3>
+        <ul>
+          <li><span class="role">Doctors &amp; specialists</span><span class="where">Hospitals, clinics, diagnostic centres</span><span class="tag hot">Healthcare</span></li>
+          <li><span class="role">Staff &amp; ICU nurses</span><span class="where">Inpatient, critical care, home care</span><span class="tag hot">Healthcare</span></li>
+          <li><span class="role">HR managers &amp; executives</span><span class="where">Corporate, manufacturing, services</span><span class="tag">HR</span></li>
+          <li><span class="role">Admin, sales &amp; operations</span><span class="where">Full-time, contract and bulk hiring</span><span class="tag">General</span></li>
+        </ul>
+        <p class="board-note">Tell us the role. We'll send a shortlist of screened candidates.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Recruitment and HR, handled end to end.</h2>
+        <p class="lead">From one critical hire to a full team, we take on the search, screening and paperwork so you can focus on running your organisation.</p>
+      </div>
+      <div class="services">
+        <article class="svc feature">
+          <div class="icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></div>
+          <h3>Healthcare staffing</h3>
+          <p>Qualified doctors, nurses and allied health professionals for hospitals, clinics and care providers. We verify registrations, qualifications and experience before you meet anyone.</p>
+          <ul class="chips"><li>Doctors</li><li>Specialists</li><li>Staff nurses</li><li>ICU &amp; OT nurses</li><li>Lab &amp; technicians</li><li>Pharmacists</li></ul>
+        </article>
+        <article class="svc side">
+          <div class="icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.5 3.4-5.5 6.5-5.5s5.7 2 6.5 5.5"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18 14.8c1.9.8 3.1 2.5 3.5 5.2"/></svg></div>
+          <h3>Recruitment</h3>
+          <p>Permanent, contract and bulk hiring across corporate and industry roles, from entry level to senior management.</p>
+          <ul class="chips"><li>Permanent</li><li>Contract</li><li>Bulk hiring</li><li>Executive search</li></ul>
+        </article>
+        <article class="svc third">
+          <div class="icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></div>
+          <h3>HR consultancy</h3>
+          <p>HR policies, onboarding, payroll support and compliance for growing businesses without a full HR team.</p>
+        </article>
+        <article class="svc third">
+          <div class="icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5M8 11l2 2 4-4"/></svg></div>
+          <h3>Screening &amp; verification</h3>
+          <p>Background, reference and document checks so every candidate you see is who they say they are.</p>
+        </article>
+        <article class="svc third">
+          <div class="icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16v12H4z"/><path d="M9 7V5h6v2M4 12h16"/></svg></div>
+          <h3>Other staffing services</h3>
+          <p>Support staff, administration, sales and operations roles. If you need people, ask us.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="split-sec" id="employers">
+    <div class="wrap split">
+      <div class="aud">
+        <h3>For employers</h3>
+        <p class="lead">Share your requirement once. We do the searching.</p>
+        <ul>
+          <li>Pre-screened shortlists, not piles of CVs</li>
+          <li>Credentials and references checked for you</li>
+          <li>One point of contact from brief to joining</li>
+          <li>Replacement support if a hire doesn't work out</li>
+        </ul>
+        <a class="btn btn-primary" href="#contact">Share a requirement</a>
+      </div>
+      <div class="aud" id="candidates">
+        <h3>For candidates</h3>
+        <p class="lead">Doctors, nurses and professionals looking for their next role.</p>
+        <ul>
+          <li>Free registration, no charges to candidates</li>
+          <li>Roles matched to your skills and location</li>
+          <li>Help with your CV and interview preparation</li>
+          <li>Updates at every stage of the process</li>
+        </ul>
+        <a class="btn btn-ghost" href="#contact">Register your CV</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="process">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>How a hire works with us.</h2>
+        <p class="lead">A clear process, so you always know what happens next.</p>
+      </div>
+      <div class="steps">
+        <div class="step"><h3>Understand the role</h3><p>We learn what the position needs: skills, experience, shifts and culture.</p></div>
+        <div class="step"><h3>Search &amp; screen</h3><p>We source candidates and check qualifications, licences and references.</p></div>
+        <div class="step"><h3>Shortlist &amp; interview</h3><p>You meet only the strongest matches. We arrange the interviews.</p></div>
+        <div class="step"><h3>Offer &amp; onboard</h3><p>We handle offers and joining formalities, and follow up after they start.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap why">
+      <h2>Why organisations choose Aster.</h2>
+      <div class="facts">
+        <div class="fact"><h3>Healthcare know-how</h3><p>We understand clinical roles, registrations and the realities of hospital staffing.</p></div>
+        <div class="fact"><h3>Quality over volume</h3><p>Fewer, better candidates means less of your time spent interviewing.</p></div>
+        <div class="fact"><h3>Fast turnaround</h3><p>Urgent requirement? We prioritise shortlists for time-critical roles.</p></div>
+        <div class="fact"><h3>Honest communication</h3><p>Straight answers on timelines, availability and salaries.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap contact-grid">
+      <div>
+        <h2>Let's talk about your hiring.</h2>
+        <p class="lead">Employers and candidates can reach us directly, or send a message and we'll get back to you within one working day.</p>
+        <ul class="details">
+          <li><span>Phone</span><a href="tel:+910000000000">+91 00000 00000</a></li>
+          <li><span>Email</span><a href="mailto:info@asterconsultancyservices.com">info@asterconsultancyservices.com</a></li>
+          <li><span>Office</span>Your office address here</li>
+        </ul>
+      </div>
+      <form id="enquiry" novalidate>
+        <div class="row">
+          <label>Name<input name="name" required autocomplete="name"></label>
+          <label>Phone<input name="phone" type="tel" required autocomplete="tel"></label>
+        </div>
+        <label>Email<input name="email" type="email" autocomplete="email"></label>
+        <label>I am
+          <select name="type">
+            <option>An employer looking to hire</option>
+            <option>A candidate looking for a job</option>
+          </select>
+        </label>
+        <label>Message<textarea name="message" placeholder="Role, number of positions, location, or your experience"></textarea></label>
+        <button class="btn btn-primary" type="submit">Send message</button>
+        <p class="form-note" id="form-note">This opens your email app with the message filled in.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>&copy; <span id="yr">2026</span> Aster Consultancy Services. All rights reserved.</span>
+    <span>HR &bull; Recruitment &bull; Healthcare staffing</span>
+  </div>
+</footer>
+
+<script>
+  const t=document.querySelector('.menu-toggle'),l=document.getElementById('links');
+  t.addEventListener('click',()=>{const o=l.classList.toggle('open');t.setAttribute('aria-expanded',o)});
+  l.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{l.classList.remove('open');t.setAttribute('aria-expanded',false)}));
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  const f=document.getElementById('enquiry'),note=document.getElementById('form-note');
+  f.addEventListener('submit',e=>{
+    e.preventDefault();
+    const d=new FormData(f);
+    if(!d.get('name')||!d.get('phone')){note.textContent='Please add your name and phone number.';note.style.color='#C41E3A';return;}
+    const to=document.querySelector('.details a[href^="mailto:"]').href.replace('mailto:','');
+    const body=`Name: ${d.get('name')}\nPhone: ${d.get('phone')}\nEmail: ${d.get('email')}\n${d.get('type')}\n\n${d.get('message')}`;
+    location.href=`mailto:${to}?subject=${encodeURIComponent('Website enquiry: '+d.get('type'))}&body=${encodeURIComponent(body)}`;
+    note.textContent='Opening your email app…';note.style.color='';
+  });
+</script>
+</body>
+</html>
