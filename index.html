@@ -4,352 +4,1221 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Aster Consultancy Services | HR, Recruitment & Healthcare Staffing</title>
-<meta name="description" content="Aster Consultancy Services connects employers with doctors, nurses, HR professionals and skilled staff. Recruitment and HR consultancy you can rely on.">
+<meta name="description" content="Aster Consultancy Services connects employers with doctors, nurses, HR professionals and skilled staff. Recruitment, staffing, payroll and HR consultancy under one roof.">
+<meta name="theme-color" content="#16235E">
+<meta property="og:title" content="Aster Consultancy Services">
+<meta property="og:description" content="Recruitment, healthcare staffing and HR consultancy. The right people, placed where they matter.">
+<meta property="og:type" content="website">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"EmploymentAgency","name":"Aster Consultancy Services","description":"Recruitment, healthcare staffing and HR consultancy.","telephone":"+91 00000 00000","email":"info@asterconsultancyservices.com"}
+</script>
+<script>document.documentElement.classList.add('js')</script>
 <style>
 :root{
   --navy:#16235E;
+  --navy-2:#1E2F7A;
   --navy-deep:#0D1640;
   --crimson:#C41E3A;
+  --crimson-dark:#A5182F;
   --crimson-soft:#F7E3E7;
   --mist:#EEF1F8;
   --ink:#1B2140;
   --muted:#5A6283;
   --line:#D6DBEA;
   --white:#FFFFFF;
+  --on-navy:#C9D0EA;
+  --on-navy-2:#9AA3C7;
+  --ok:#1E8E5A;
   --display:"Bricolage Grotesque", system-ui, sans-serif;
   --body:"Figtree", system-ui, sans-serif;
+  --radius:20px;
+  --shadow:0 24px 50px -24px rgba(13,22,64,.35);
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
 body{font-family:var(--body);color:var(--ink);background:var(--white);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
-img{max-width:100%;display:block}
+img,svg{max-width:100%;display:block}
 a{color:inherit}
+button{font:inherit}
 :focus-visible{outline:3px solid var(--crimson);outline-offset:3px;border-radius:4px}
-.wrap{width:min(1160px,100% - 40px);margin-inline:auto}
-h1,h2,h3{font-family:var(--display);line-height:1.08;letter-spacing:-.02em;color:var(--navy)}
-h2{font-size:clamp(2rem,4vw,3rem);font-weight:800;max-width:18ch}
-.lead{font-size:1.15rem;color:var(--muted);max-width:56ch}
+.wrap{width:min(1180px,100% - 40px);margin-inline:auto}
+h1,h2,h3,h4{font-family:var(--display);line-height:1.08;letter-spacing:-.02em;color:var(--navy)}
+h2{font-size:clamp(2rem,4vw,3.1rem);font-weight:800;max-width:18ch}
+h1,h2{text-wrap:balance}
+h2 em{font-style:normal;color:var(--crimson)}
+.contact h2 em,.cta-box h2 em{color:#FF8A9E}
+.cta-box h2 em{color:#FFD3DB}
+.lead{font-size:1.13rem;color:var(--muted);max-width:56ch}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--crimson);margin-bottom:14px}
+.eyebrow::before{content:"";width:22px;height:2px;background:currentColor}
+.ico{width:24px;height:24px;flex-shrink:0}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:-999px;top:8px;z-index:100;background:var(--crimson);color:#fff;padding:10px 16px;border-radius:8px}
+.skip:focus{left:8px}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 24px;border-radius:999px;font-weight:600;text-decoration:none;font-size:.97rem;border:2px solid transparent;cursor:pointer;font-family:var(--body);transition:transform .2s,background .2s,color .2s,box-shadow .2s;white-space:nowrap}
+.btn .ico{width:18px;height:18px;transition:transform .2s}
+.btn:hover .ico{transform:translateX(3px)}
+.btn-primary{background:var(--crimson);color:var(--white);box-shadow:0 10px 24px -10px rgba(196,30,58,.7)}
+.btn-primary:hover{background:var(--crimson-dark);transform:translateY(-2px)}
+.btn-ghost{border-color:var(--navy);color:var(--navy);background:transparent}
+.btn-ghost:hover{background:var(--navy);color:var(--white)}
+.btn-light{background:var(--white);color:var(--navy)}
+.btn-light:hover{transform:translateY(-2px)}
+.btn-wa{background:#1E8E5A;color:#fff}
+.btn-wa:hover{background:#17744A;transform:translateY(-2px)}
+
+/* Scroll progress */
+.progress{position:fixed;top:0;left:0;height:3px;width:100%;background:var(--crimson);transform-origin:0 50%;transform:scaleX(0);z-index:60}
+
+/* Top bar */
+.topbar{background:var(--navy-deep);color:var(--on-navy);font-size:.86rem}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:40px;flex-wrap:wrap}
+.topbar a{text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+.topbar a:hover{color:var(--white)}
+.topbar .ico{width:15px;height:15px}
+.topbar-links{display:flex;gap:22px}
+.topbar strong{color:var(--white);font-weight:600}
 
 /* Header */
-header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:border-color .2s,box-shadow .2s}
+header.scrolled{border-color:var(--line);box-shadow:0 8px 30px -18px rgba(13,22,64,.35)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:74px}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
-.mark{width:42px;height:42px;border-radius:50%;border:2.5px solid var(--navy);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:800;font-size:13px;color:var(--navy);white-space:nowrap;letter-spacing:-.04em;flex-shrink:0}
+.mark{width:44px;height:44px;border-radius:50%;border:2.5px solid var(--navy);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:800;font-size:13px;color:var(--navy);letter-spacing:-.04em;flex-shrink:0;background:var(--white)}
 .mark span{color:var(--crimson)}
-.brand-name{font-family:var(--display);font-weight:700;font-size:1.05rem;color:var(--navy);line-height:1.1}
+.brand-name{font-family:var(--display);font-weight:700;font-size:1.08rem;color:var(--navy);line-height:1.1}
 .brand-name small{display:block;font-family:var(--body);font-weight:500;font-size:.75rem;color:var(--muted);letter-spacing:.01em}
-.nav-links{display:flex;gap:28px;align-items:center;list-style:none}
-.nav-links a{text-decoration:none;font-weight:500;color:var(--ink);font-size:.97rem}
+.nav-links{display:flex;gap:6px;align-items:center;list-style:none}
+.nav-links a{text-decoration:none;font-weight:500;color:var(--ink);font-size:.96rem;padding:8px 12px;border-radius:999px;transition:color .2s,background .2s}
 .nav-links a:hover{color:var(--crimson)}
-.nav-links .btn-primary,.nav-links .btn-primary:hover{color:var(--white)}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:999px;font-weight:600;text-decoration:none;font-size:.97rem;border:2px solid transparent;cursor:pointer;font-family:var(--body)}
-.btn-primary{background:var(--crimson);color:var(--white)}
-.btn-primary:hover{background:#A5182F}
-.btn-ghost{border-color:var(--navy);color:var(--navy)}
-.btn-ghost:hover{background:var(--navy);color:var(--white)}
-.menu-toggle{display:none;background:none;border:0;font-size:1.6rem;color:var(--navy);cursor:pointer}
+.nav-links a.active{color:var(--navy);background:var(--mist)}
+.nav-links .btn{margin-left:10px;padding:11px 20px}
+.nav-links .btn,.nav-links .btn:hover{color:var(--white);background:var(--crimson)}
+.menu-toggle{display:none;background:none;border:0;width:44px;height:44px;border-radius:12px;color:var(--navy);cursor:pointer;place-items:center}
+.menu-toggle:hover{background:var(--mist)}
 
 /* Hero */
-.hero{background:var(--navy);color:var(--white);overflow:hidden;position:relative}
-.hero::after{content:"";position:absolute;right:-180px;top:-180px;width:560px;height:560px;border-radius:50%;border:70px solid rgba(196,30,58,.9);pointer-events:none}
-.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;padding:96px 0 104px;position:relative;z-index:1}
-.hero h1{color:var(--white);font-size:clamp(2.6rem,6vw,4.6rem);font-weight:800;max-width:13ch}
-.hero p{color:#C9D0EA;font-size:1.2rem;margin:24px 0 36px;max-width:46ch}
-.hero .btn-ghost{border-color:rgba(255,255,255,.6);color:var(--white)}
+.hero{background:var(--navy);color:var(--white);overflow:hidden;position:relative;isolation:isolate}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:
+  radial-gradient(700px 400px at 10% 110%,rgba(196,30,58,.35),transparent 70%),
+  radial-gradient(600px 500px at 90% 0%,rgba(80,110,255,.25),transparent 70%),
+  radial-gradient(rgba(255,255,255,.08) 1px,transparent 1.5px) 0 0/26px 26px}
+.ring{position:absolute;border-radius:50%;pointer-events:none;z-index:-1}
+.ring-1{right:-180px;top:-180px;width:560px;height:560px;border:70px solid rgba(196,30,58,.9);animation:float 12s ease-in-out infinite}
+.ring-2{left:-90px;bottom:-120px;width:260px;height:260px;border:2px solid rgba(255,255,255,.18)}
+@keyframes float{50%{transform:translate(-14px,18px)}}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center;padding:92px 0 100px}
+.pill{display:inline-flex;align-items:center;gap:10px;padding:7px 14px 7px 8px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);font-size:.88rem;color:var(--white);margin-bottom:26px}
+.pill b{background:var(--crimson);border-radius:999px;padding:2px 10px;font-size:.75rem;font-weight:700;letter-spacing:.04em}
+.hero h1{color:var(--white);font-size:clamp(2.6rem,6vw,4.7rem);font-weight:800;max-width:14ch}
+.rot{display:inline-block;color:#FF8A9E;position:relative;transition:opacity .35s,transform .35s}
+.rot.out{opacity:0;transform:translateY(12px)}
+.hero p.sub{color:var(--on-navy);font-size:1.2rem;margin:24px 0 34px;max-width:46ch}
+.hero .btn-ghost{border-color:rgba(255,255,255,.55);color:var(--white)}
 .hero .btn-ghost:hover{background:var(--white);color:var(--navy)}
 .actions{display:flex;flex-wrap:wrap;gap:14px}
+.assure{display:flex;flex-wrap:wrap;gap:10px 24px;list-style:none;margin-top:36px;color:var(--on-navy);font-size:.94rem}
+.assure li{display:flex;align-items:center;gap:8px}
+.assure .ico{width:18px;height:18px;color:#FF8A9E}
 
-/* Placement board: the one memorable element */
-.board{background:var(--white);color:var(--ink);border-radius:20px;padding:26px;box-shadow:0 30px 60px -20px rgba(5,10,40,.55)}
-.board h3{font-size:1.05rem;font-weight:700;display:flex;justify-content:space-between;align-items:center}
+/* Hero visual: live screening card */
 .live{font-family:var(--body);font-size:.8rem;font-weight:600;color:var(--crimson);display:flex;align-items:center;gap:6px}
 .live::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--crimson);animation:pulse 1.6s infinite}
 @keyframes pulse{50%{opacity:.25}}
-.board ul{list-style:none;margin-top:16px}
-.board li{display:grid;grid-template-columns:1fr auto;gap:4px 12px;padding:14px 0;border-top:1px solid var(--line)}
-.board li:first-child{border-top:0}
-.role{font-weight:600}
-.where{grid-column:1;font-size:.88rem;color:var(--muted)}
-.tag{grid-row:1/3;grid-column:2;align-self:center;font-size:.8rem;font-weight:600;padding:5px 12px;border-radius:999px;background:var(--mist);color:var(--navy)}
+.tag{font-size:.78rem;font-weight:600;padding:5px 12px;border-radius:999px;background:var(--mist);color:var(--navy);white-space:nowrap}
 .tag.hot{background:var(--crimson-soft);color:var(--crimson)}
-.hero .board-note{margin:14px 0 0;font-size:.85rem;color:var(--muted)}
+.hero-visual{position:relative;padding:34px 0 40px 34px}
+.stack{position:absolute;inset:34px 0 40px 34px;border-radius:26px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14)}
+.stack.s1{transform:rotate(-4deg) translate(-14px,10px)}
+.stack.s2{transform:rotate(3deg) translate(12px,6px);background:rgba(196,30,58,.25);border-color:rgba(255,138,158,.3)}
+.vcard{position:relative;background:var(--white);color:var(--ink);border-radius:26px;padding:26px;box-shadow:0 50px 90px -30px rgba(5,10,40,.75)}
+.vc-head{display:flex;justify-content:space-between;align-items:center;font-family:var(--display);font-weight:700;color:var(--navy);font-size:1.05rem}
+.vc-profile{display:flex;align-items:center;gap:14px;margin:20px 0 18px;padding:16px;border-radius:18px;background:var(--mist);transition:opacity .35s,transform .35s}
+.vc-profile.out,.vc-checks.out{opacity:0;transform:translateY(8px)}
+.avatar{width:54px;height:54px;border-radius:16px;background:linear-gradient(135deg,var(--navy),var(--navy-2));color:var(--white);display:grid;place-items:center;flex-shrink:0;position:relative}
+.avatar::after{content:"";position:absolute;right:-4px;bottom:-4px;width:16px;height:16px;border-radius:50%;background:var(--ok);border:3px solid var(--mist)}
+.vc-profile b{display:block;font-size:1.05rem;color:var(--navy)}
+.vc-profile span.meta{font-size:.88rem;color:var(--muted)}
+.vc-profile .tag{margin-left:auto}
+.vc-checks{list-style:none;display:grid;gap:4px;transition:opacity .35s,transform .35s}
+.vc-checks li{display:flex;align-items:center;gap:12px;padding:9px 4px;font-weight:500;color:var(--muted);transition:color .3s}
+.ck{width:24px;height:24px;border-radius:50%;border:2px solid var(--line);display:grid;place-items:center;flex-shrink:0;transition:all .3s;color:transparent}
+.ck .ico{width:14px;height:14px}
+.vc-checks li.done{color:var(--ink)}
+.vc-checks li.done .ck{background:var(--ok);border-color:var(--ok);color:var(--white);transform:scale(1.08)}
+.vc-checks li.doing .ck{border-color:var(--crimson);border-top-color:transparent;animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.vc-bar{height:8px;border-radius:999px;background:var(--mist);margin:16px 0 14px;overflow:hidden}
+.vc-bar span{display:block;height:100%;width:0;border-radius:inherit;background:linear-gradient(90deg,var(--crimson),#FF6B85);transition:width .5s ease}
+.vc-foot{display:flex;justify-content:space-between;align-items:center;font-size:.9rem;color:var(--muted);gap:12px}
+.vc-status{display:inline-flex;align-items:center;gap:6px;font-weight:600;padding:6px 12px;border-radius:999px;background:var(--crimson-soft);color:var(--crimson);transition:all .3s;white-space:nowrap}
+.vc-status.ok{background:#E3F4EC;color:var(--ok)}
+.vc-status .ico{width:15px;height:15px}
+.float-card{position:absolute;background:var(--white);border-radius:16px;padding:12px 16px;box-shadow:var(--shadow);display:flex;align-items:center;gap:12px;font-size:.85rem;color:var(--muted);z-index:2;animation:float 8s ease-in-out infinite}
+.float-card.f1{left:-18px;bottom:0}
+.float-card.f2{right:-14px;top:-34px;animation-delay:-4s}
+.float-card .dot{width:36px;height:36px;border-radius:50%;background:#E3F4EC;color:var(--ok);display:grid;place-items:center;flex-shrink:0}
+.float-card.f2 .dot{background:var(--crimson-soft);color:var(--crimson)}
+.float-card .dot .ico{width:18px;height:18px}
+.float-card b{display:block;color:var(--navy);font-size:.95rem}
+
+/* Stats */
+.stats{background:var(--white);position:relative;z-index:2}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);background:var(--white);border:1px solid var(--line);border-radius:var(--radius);margin-top:-44px;box-shadow:var(--shadow)}
+.stat{padding:28px 30px;border-left:1px solid var(--line)}
+.stat:first-child{border-left:0}
+.stat b{display:block;font-family:var(--display);font-weight:800;font-size:2.4rem;color:var(--navy);line-height:1;letter-spacing:-.03em}
+.stat b em{font-style:normal;color:var(--crimson)}
+.stat>span{color:var(--muted);font-size:.95rem}
+
+/* Marquee */
+.marquee{padding:48px 0 0;overflow:hidden}
+.marquee p{text-align:center;font-size:.85rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:18px}
+.track-mask{-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+.track{display:flex;gap:14px;width:max-content;animation:scroll 40s linear infinite;list-style:none}
+.track-mask:hover .track{animation-play-state:paused}
+.track li{padding:10px 20px;border:1px solid var(--line);border-radius:999px;font-weight:600;color:var(--navy);white-space:nowrap;background:var(--white)}
+@keyframes scroll{to{transform:translateX(calc(-50% - 7px))}}
 
 /* Sections */
 section{padding:104px 0}
-.section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap;margin-bottom:56px}
+.section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap;margin-bottom:52px}
+.center-head{text-align:center;margin:0 auto 52px;max-width:720px}
+.center-head h2,.center-head .lead{margin-inline:auto}
+.center-head .lead{margin-top:16px}
 
 /* Services */
-.services{display:grid;grid-template-columns:repeat(12,1fr);gap:20px}
-.svc{border:1px solid var(--line);border-radius:18px;padding:34px;background:var(--white)}
-.svc.feature{grid-column:span 7;background:var(--navy);color:var(--white);border-color:var(--navy)}
-.svc.feature h3{color:var(--white)}
-.svc.feature p{color:#C9D0EA}
-.svc.side{grid-column:span 5}
-.svc.third{grid-column:span 4}
-.svc h3{font-size:1.5rem;font-weight:700;margin:18px 0 10px}
-.svc p{color:var(--muted)}
-.icon{width:48px;height:48px;border-radius:12px;display:grid;place-items:center;background:var(--crimson-soft);color:var(--crimson)}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.svc{border:1px solid var(--line);border-radius:var(--radius);padding:32px;background:var(--white);display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s,border-color .25s;position:relative;overflow:hidden}
+.svc:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:transparent}
+.svc.feature{grid-column:span 2;background:var(--navy);color:var(--white);border-color:var(--navy)}
+.svc.feature::after{content:"";position:absolute;right:-90px;bottom:-90px;width:260px;height:260px;border-radius:50%;border:44px solid rgba(196,30,58,.85)}
+.svc.feature h3{color:var(--white);font-size:2rem}
+.svc.feature p{color:var(--on-navy);max-width:52ch}
+.svc h3{font-size:1.35rem;font-weight:700;margin:18px 0 10px}
+.svc p{color:var(--muted);font-size:.98rem}
+.icon{width:50px;height:50px;border-radius:14px;display:grid;place-items:center;background:var(--crimson-soft);color:var(--crimson);transition:transform .25s}
+.svc:hover .icon{transform:rotate(-6deg) scale(1.05)}
 .svc.feature .icon{background:var(--crimson);color:var(--white)}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px;list-style:none}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;list-style:none;position:relative;z-index:1}
 .chips li{font-size:.85rem;padding:6px 13px;border-radius:999px;border:1px solid rgba(255,255,255,.3)}
-.svc:not(.feature) .chips li{border-color:var(--line);color:var(--ink)}
+.svc:not(.feature) .chips li,.ind-panel .chips li{border-color:var(--line);color:var(--ink)}
+.svc-link{margin-top:auto;padding-top:22px;font-weight:700;font-size:.93rem;color:var(--crimson);text-decoration:none;display:inline-flex;align-items:center;gap:6px;background:none;border:0;cursor:pointer;position:relative;z-index:1;align-self:flex-start}
+.svc.feature .svc-link{color:#FF8A9E}
+.svc-link .ico{width:16px;height:16px;transition:transform .2s}
+.svc-link:hover .ico{transform:translateX(4px)}
+
+/* Industries tabs */
+.ind-sec{background:var(--mist)}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px}
+.tab{padding:11px 20px;border-radius:999px;border:1.5px solid var(--line);background:var(--white);font-weight:600;color:var(--ink);cursor:pointer;display:inline-flex;align-items:center;gap:8px;transition:all .2s}
+.tab .ico{width:18px;height:18px}
+.tab:hover{border-color:var(--navy)}
+.tab[aria-selected="true"]{background:var(--navy);border-color:var(--navy);color:var(--white)}
+.ind-panel{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;animation:fade .4s ease}
+.ind-panel[hidden]{display:none}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}}
+.ind-main,.ind-side{background:var(--white);border-radius:var(--radius);padding:40px}
+.ind-main h3{font-size:1.9rem;font-weight:800;margin-bottom:12px}
+.ind-main p{color:var(--muted);max-width:56ch}
+.ind-side{background:var(--navy);color:var(--white)}
+.ind-side h4{color:var(--white);font-size:1.15rem;margin-bottom:16px}
+.ticks{list-style:none}
+.ticks li{padding:11px 0 11px 32px;border-top:1px solid var(--line);position:relative}
+.ticks li::before{content:"";position:absolute;left:4px;top:18px;width:13px;height:7px;border-left:2.5px solid var(--crimson);border-bottom:2.5px solid var(--crimson);transform:rotate(-45deg)}
+.ind-side .ticks li{border-color:rgba(255,255,255,.15);color:var(--on-navy)}
+.ind-side .ticks li::before{border-color:#FF8A9E}
+.ind-side .btn{margin-top:24px}
+
+/* Roles finder */
+.finder{display:flex;gap:16px;flex-wrap:wrap;align-items:center;justify-content:space-between;margin-bottom:24px}
+.search{position:relative;flex:1 1 280px;max-width:380px}
+.search .ico{position:absolute;left:16px;top:50%;transform:translateY(-50%);width:18px;height:18px;color:var(--muted)}
+.search input{padding-left:44px;border-radius:999px}
+.filters{display:flex;gap:8px;flex-wrap:wrap}
+.filter{padding:9px 16px;border-radius:999px;border:1.5px solid var(--line);background:var(--white);font-weight:600;font-size:.9rem;color:var(--ink);cursor:pointer;transition:all .2s}
+.filter:hover{border-color:var(--navy)}
+.filter[aria-pressed="true"]{background:var(--crimson);border-color:var(--crimson);color:var(--white)}
+.roles{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;list-style:none}
+.role-card{border:1px solid var(--line);border-radius:16px;padding:20px 22px;display:flex;flex-direction:column;gap:6px;transition:border-color .2s,box-shadow .2s,transform .2s}
+.role-card:hover{border-color:var(--navy);transform:translateY(-3px);box-shadow:var(--shadow)}
+.role-card[hidden]{display:none}
+.role-top{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.role-card h3{font-size:1.1rem;font-weight:700}
+.role-card p{font-size:.9rem;color:var(--muted)}
+.role-meta{display:flex;justify-content:space-between;align-items:center;margin-top:10px;gap:8px}
+.type{font-size:.8rem;color:var(--muted);font-weight:600}
+.apply{background:none;border:0;color:var(--crimson);font-weight:700;font-size:.9rem;cursor:pointer;display:inline-flex;align-items:center;gap:4px;padding:4px 0}
+.apply .ico{width:16px;height:16px;transition:transform .2s}
+.apply:hover .ico{transform:translateX(3px)}
+.count{font-size:.9rem;color:var(--muted);margin-top:18px}
+.more-wrap{display:flex;justify-content:center;align-items:center;gap:18px;flex-wrap:wrap;margin-top:28px}
+.more-wrap .count{margin:0}
+.empty{padding:40px;text-align:center;border:1.5px dashed var(--line);border-radius:16px;color:var(--muted)}
 
 /* Audience split */
 .split-sec{background:var(--mist)}
 .split{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-.aud{background:var(--white);border-radius:22px;padding:44px}
+.aud{background:var(--white);border-radius:24px;padding:44px;position:relative;overflow:hidden}
+.aud.dark{background:var(--navy);color:var(--white)}
+.aud.dark h3{color:var(--white)}
+.aud.dark .lead{color:var(--on-navy)}
+.aud.dark .ticks li{border-color:rgba(255,255,255,.15);color:var(--on-navy)}
+.aud.dark .ticks li::before{border-color:#FF8A9E}
+.aud.dark .btn-ghost{border-color:rgba(255,255,255,.6);color:var(--white)}
+.aud.dark .btn-ghost:hover{background:var(--white);color:var(--navy)}
 .aud h3{font-size:1.9rem;font-weight:800;margin-bottom:12px}
-.aud ul{list-style:none;margin:26px 0 32px}
-.aud li{padding:12px 0 12px 34px;border-top:1px solid var(--line);position:relative}
-.aud li::before{content:"";position:absolute;left:4px;top:19px;width:14px;height:8px;border-left:2.5px solid var(--crimson);border-bottom:2.5px solid var(--crimson);transform:rotate(-45deg)}
+.aud .ticks{margin:26px 0 32px}
 
-/* Process (a real sequence, so numbered) */
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:s;border-top:2px solid var(--navy)}
-.step{padding:30px 26px 0 0;counter-increment:s}
-.step::before{content:counter(s);display:block;font-family:var(--display);font-weight:800;font-size:3.2rem;color:var(--crimson);line-height:1;margin-bottom:14px}
+/* Process */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;counter-reset:s;position:relative}
+.steps::before{content:"";position:absolute;top:34px;left:34px;right:34px;height:2px;background:repeating-linear-gradient(90deg,var(--line) 0 8px,transparent 8px 14px)}
+.steps-line{position:absolute;top:34px;left:34px;right:34px;height:2px;pointer-events:none}
+.js .steps-line.reveal{opacity:1;transform:none}
+.steps-line span{display:block;height:100%;background:linear-gradient(90deg,var(--navy),var(--crimson));transform:scaleX(0);transform-origin:0 50%;transition:transform 1.8s cubic-bezier(.6,0,.2,1) .3s}
+.steps-line.in span,html:not(.js) .steps-line span{transform:scaleX(1)}
+.step-num{z-index:1}
+.step{counter-increment:s;position:relative}
+.step-num{width:68px;height:68px;border-radius:50%;background:var(--white);border:2px solid var(--navy);display:grid;place-items:center;color:var(--navy);margin-bottom:22px;position:relative;transition:background .3s,color .3s}
+.step:hover .step-num{background:var(--navy);color:var(--white)}
+.step-num::after{content:counter(s);position:absolute;top:-6px;right:-6px;width:26px;height:26px;border-radius:50%;background:var(--crimson);color:var(--white);font-family:var(--display);font-weight:800;font-size:.85rem;display:grid;place-items:center}
 .step h3{font-size:1.2rem;font-weight:700;margin-bottom:8px}
 .step p{color:var(--muted);font-size:.97rem}
 
 /* Why */
-.why{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:start}
-.facts{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.fact{border-left:3px solid var(--crimson);padding:4px 0 4px 20px}
+.why{display:grid;grid-template-columns:.85fr 1.15fr;gap:64px;align-items:start}
+.why .lead{margin-top:18px}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.fact{border:1px solid var(--line);border-radius:18px;padding:26px;transition:border-color .2s,transform .2s}
+.fact:hover{border-color:var(--crimson);transform:translateY(-3px)}
+.fact .icon{width:44px;height:44px;margin-bottom:16px}
 .fact h3{font-size:1.15rem;margin-bottom:6px}
-.fact p{color:var(--muted);font-size:.97rem}
+.fact p{color:var(--muted);font-size:.95rem}
+
+/* FAQ */
+.faq-sec{background:var(--mist)}
+.faq{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px;align-items:start}
+.faq .lead{margin:18px 0 28px}
+.faq-list{display:grid;gap:12px}
+details{background:var(--white);border-radius:16px;border:1px solid transparent;transition:border-color .2s}
+details[open]{border-color:var(--line);box-shadow:0 12px 30px -20px rgba(13,22,64,.3)}
+summary{list-style:none;cursor:pointer;padding:22px 26px;font-weight:700;font-family:var(--display);font-size:1.12rem;color:var(--navy);display:flex;justify-content:space-between;align-items:center;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary .pm{width:30px;height:30px;border-radius:50%;background:var(--mist);flex-shrink:0;position:relative;transition:background .2s,transform .3s}
+summary .pm::before,summary .pm::after{content:"";position:absolute;left:50%;top:50%;width:12px;height:2px;background:var(--navy);transform:translate(-50%,-50%)}
+summary .pm::after{transform:translate(-50%,-50%) rotate(90deg);transition:transform .3s}
+details[open] .pm{background:var(--crimson);transform:rotate(180deg)}
+details[open] .pm::before,details[open] .pm::after{background:var(--white)}
+details[open] .pm::after{transform:translate(-50%,-50%) rotate(0)}
+details p{padding:0 26px 22px;color:var(--muted)}
+
+/* CTA band */
+.cta{padding:0;background:var(--white)}
+.cta-box{background:linear-gradient(120deg,var(--crimson),#8E1029);color:var(--white);border-radius:28px;padding:56px;display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap;position:relative;overflow:hidden;margin-block:104px}
+.cta-box::after{content:"";position:absolute;right:-60px;top:-100px;width:300px;height:300px;border-radius:50%;border:50px solid rgba(255,255,255,.12)}
+.cta-box h2{color:var(--white);max-width:20ch}
+.cta-box p{color:#FBD5DC;margin-top:10px;font-size:1.1rem}
+.cta-box .actions{position:relative;z-index:1}
 
 /* Contact */
-.contact{background:var(--navy-deep);color:var(--white)}
+.contact{background:var(--navy-deep);color:var(--white);position:relative;overflow:hidden}
+.contact::before{content:"";position:absolute;left:-200px;bottom:-200px;width:500px;height:500px;border-radius:50%;background:radial-gradient(rgba(196,30,58,.35),transparent 70%)}
 .contact h2{color:var(--white)}
-.contact .lead{color:#C9D0EA;margin-top:18px}
-.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+.contact .eyebrow{color:#FF8A9E}
+.contact .lead{color:var(--on-navy);margin-top:18px}
+.contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:start;position:relative}
 .details{list-style:none;margin-top:36px}
-.details li{padding:16px 0;border-top:1px solid rgba(255,255,255,.15)}
-.details span{display:block;font-size:.85rem;color:#9AA3C7}
-.details a{text-decoration:none;font-weight:600;font-size:1.1rem}
+.details li{padding:16px 0;border-top:1px solid rgba(255,255,255,.12);display:flex;gap:16px;align-items:center}
+.details .d-ico{width:46px;height:46px;border-radius:14px;background:rgba(255,255,255,.08);display:grid;place-items:center;color:#FF8A9E;flex-shrink:0}
+.details .d-ico .ico{width:20px;height:20px}
+.details span{display:block;font-size:.85rem;color:var(--on-navy-2)}
+.details a{text-decoration:none;font-weight:600;font-size:1.08rem;word-break:break-word}
 .details a:hover{color:#FF8A9E}
-form{background:var(--white);color:var(--ink);border-radius:22px;padding:36px;display:grid;gap:16px}
+form{background:var(--white);color:var(--ink);border-radius:24px;padding:36px;display:grid;gap:16px;box-shadow:0 40px 80px -30px rgba(0,0,0,.6)}
+.seg{display:grid;grid-template-columns:1fr 1fr;background:var(--mist);border-radius:999px;padding:5px;gap:4px}
+.seg input{position:absolute;opacity:0;pointer-events:none}
+.seg label{display:flex;align-items:center;justify-content:center;gap:8px;padding:11px;border-radius:999px;cursor:pointer;font-weight:600;color:var(--muted);transition:all .2s;text-align:center}
+.seg label .ico{width:18px;height:18px}
+.seg input:checked+label{background:var(--white);color:var(--navy);box-shadow:0 4px 14px -6px rgba(13,22,64,.35)}
+.seg input:focus-visible+label{outline:3px solid var(--crimson);outline-offset:2px}
 .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-label{font-weight:600;font-size:.9rem;display:grid;gap:6px}
-input,select,textarea{font:inherit;font-weight:400;padding:12px 14px;border:1.5px solid var(--line);border-radius:10px;background:var(--white);color:var(--ink);width:100%}
-input:focus,select:focus,textarea:focus{outline:none;border-color:var(--navy);box-shadow:0 0 0 3px rgba(22,35,94,.15)}
-textarea{min-height:120px;resize:vertical}
-form .btn{justify-self:start}
+.field{font-weight:600;font-size:.9rem;display:grid;gap:6px;align-content:start}
+.field .req{color:var(--crimson)}
+input,select,textarea{font:inherit;font-weight:400;padding:12px 14px;border:1.5px solid var(--line);border-radius:12px;background:var(--white);color:var(--ink);width:100%;transition:border-color .2s,box-shadow .2s}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--navy);box-shadow:0 0 0 4px rgba(22,35,94,.12)}
+.field.invalid input{border-color:var(--crimson);box-shadow:0 0 0 4px rgba(196,30,58,.12)}
+.err{font-size:.8rem;font-weight:500;color:var(--crimson);display:none}
+.field.invalid .err{display:block}
+textarea{min-height:110px;resize:vertical}
+.mode-fields{display:grid;gap:16px}
+.mode-fields[hidden]{display:none}
+.form-actions{display:flex;gap:12px;flex-wrap:wrap}
 .form-note{font-size:.85rem;color:var(--muted)}
+.form-note.ok{color:var(--ok);font-weight:600}
 
-footer{background:var(--navy-deep);color:#9AA3C7;border-top:1px solid rgba(255,255,255,.1);padding:28px 0;font-size:.9rem}
-.foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer{background:var(--navy-deep);color:var(--on-navy-2);border-top:1px solid rgba(255,255,255,.08);padding:64px 0 28px;font-size:.94rem}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.08)}
+.foot-grid .brand-name{color:var(--white)}
+.foot-grid .brand-name small{color:var(--on-navy-2)}
+.foot-grid .mark{background:transparent;border-color:var(--white);color:var(--white)}
+.foot-grid .mark span{color:#FF8A9E}
+.foot-about{margin-top:18px;max-width:34ch}
+footer h4{color:var(--white);font-size:1rem;margin-bottom:16px}
+footer ul{list-style:none;display:grid;gap:10px}
+footer a{text-decoration:none}
+footer a:hover{color:var(--white)}
+.foot-bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:24px;font-size:.88rem}
+
+/* Floating buttons */
+.fab{position:fixed;right:20px;bottom:20px;z-index:40;display:flex;flex-direction:column;gap:12px;align-items:flex-end}
+.fab a,.fab button{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;border:0;cursor:pointer;box-shadow:0 14px 30px -10px rgba(13,22,64,.5);transition:transform .2s,opacity .3s}
+.fab a:hover,.fab button:hover{transform:translateY(-3px)}
+.fab-wa{background:#1E8E5A;color:#fff}
+.fab-top{background:var(--white);color:var(--navy);opacity:0;pointer-events:none}
+.fab-top.show{opacity:1;pointer-events:auto}
+.mbar{display:none}
+
+/* Reveal on scroll */
+.js .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.js .reveal.in{opacity:1;transform:none}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js .reveal{opacity:1;transform:none}
+}
 
 /* Responsive */
-@media (max-width:960px){
-  .hero-grid,.why,.contact-grid,.split{grid-template-columns:1fr}
-  .svc.feature,.svc.side,.svc.third{grid-column:span 12}
-  .steps{grid-template-columns:1fr 1fr;gap:0 24px}
-  .hero::after{width:380px;height:380px;border-width:48px;right:-200px;top:-140px}
+@media (max-width:1040px){
+  .nav-links a{padding:8px 9px}
+  .roles{grid-template-columns:1fr 1fr}
 }
-@media (max-width:760px){
-  .nav-links{display:none;position:absolute;top:72px;left:0;right:0;background:var(--white);flex-direction:column;align-items:flex-start;padding:20px;gap:18px;border-bottom:1px solid var(--line)}
+@media (max-width:960px){
+  .hero-grid,.why,.contact-grid,.split,.faq,.ind-panel{grid-template-columns:1fr}
+  .services{grid-template-columns:1fr 1fr}
+  .stats-grid{grid-template-columns:1fr 1fr}
+  .stat:nth-child(3){border-left:0}
+  .stat:nth-child(n+3){border-top:1px solid var(--line)}
+  .steps{grid-template-columns:1fr 1fr;gap:40px 24px}
+  .steps::before{display:none}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .ring-1{width:380px;height:380px;border-width:48px;right:-200px;top:-140px}
+  .hero-visual{max-width:560px}
+  .float-card.f1{left:0}
+  .float-card.f2{right:0}
+}
+@media (max-width:860px){
+  .nav-links{display:none;position:absolute;top:74px;left:0;right:0;background:var(--white);flex-direction:column;align-items:stretch;padding:16px 20px 24px;gap:4px;border-bottom:1px solid var(--line);box-shadow:0 20px 40px -20px rgba(13,22,64,.35)}
   .nav-links.open{display:flex}
-  .menu-toggle{display:block}
+  .nav-links a{padding:12px 14px}
+  .nav-links .btn{margin:8px 0 0}
+  .menu-toggle{display:grid}
+  .topbar-links a.hide-sm{display:none}
+}
+@media (max-width:640px){
+  body{font-size:16px}
   section{padding:72px 0}
-  .hero-grid{padding:64px 0 72px}
-  .facts,.row,.steps{grid-template-columns:1fr}
-  .aud,form,.svc{padding:26px}
+  .hero-grid{padding:56px 0 88px}
+  .services,.roles,.facts,.row,.steps,.foot-grid{grid-template-columns:1fr}
+  .svc.feature{grid-column:auto}
+  .aud,form,.svc,.ind-main,.ind-side{padding:26px}
+  .cta-box{padding:36px 26px;margin-block:72px}
+  .stat{padding:22px 20px}
+  .stat b{font-size:2rem}
+  .topbar .wrap>span{display:none}
+  .topbar-links{width:100%;justify-content:space-between}
+  .hero-visual{padding:16px 6px 10px}
+  .stack{inset:16px 6px 10px}
+  .vcard{padding:20px}
+  .vc-profile{padding:12px;gap:12px}
+  .vc-profile .tag{display:none}
+  .float-card{display:none}
+  .mbar{display:grid;grid-template-columns:1fr 1fr 1.2fr;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:45;padding:10px 12px calc(10px + env(safe-area-inset-bottom,0px));background:rgba(255,255,255,.96);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--line);box-shadow:0 -10px 30px -18px rgba(13,22,64,.4)}
+  .mbar a{display:flex;align-items:center;justify-content:center;gap:6px;padding:11px 6px;border-radius:999px;font-weight:600;font-size:.92rem;text-decoration:none;color:var(--navy);background:var(--mist)}
+  .mbar a .ico{width:17px;height:17px}
+  .mbar .wa-link{background:#E3F4EC;color:var(--ok)}
+  .mbar .go{background:var(--crimson);color:var(--white)}
+  body{padding-bottom:72px}
+  .fab-wa{display:none!important}
+  .fab{right:14px;bottom:86px}
 }
 </style>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" aria-hidden="true"></div>
 
-<header>
+<!-- Icon set -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.5 3.4-5.5 6.5-5.5s5.7 2 6.5 5.5"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18 14.8c1.9.8 3.1 2.5 3.5 5.2"/></symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></symbol>
+    <symbol id="i-check-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5M8 11l2 2 4-4"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></symbol>
+    <symbol id="i-brief" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2M3 13h18"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-crown" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 8 4.5 4L12 5l4.5 7L21 8l-2 11H5z"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 9 5-9 5-9-5z"/><path d="m3 13 9 5 9-5"/></symbol>
+    <symbol id="i-cash" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2.5" y="6" width="19" height="12" rx="2"/><circle cx="12" cy="12" r="2.5"/><path d="M6 9v.01M18 15v.01"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 4.5 3.4 8 8 9 4.6-1 8-4.5 8-9V6z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7.5-4.6-9-9.5C2 7 4.3 4.5 7.2 4.5c2 0 3.6 1.2 4.8 3 1.2-1.8 2.8-3 4.8-3 2.9 0 5.2 2.5 4.2 6-1.5 4.9-9 9.5-9 9.5z"/><path d="M7 11h2.5l1.5-2.5 2 5 1.5-2.5H17"/></symbol>
+    <symbol id="i-building" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V5a1 1 0 0 1 1-1h9a1 1 0 0 1 1 1v16M15 9h4a1 1 0 0 1 1 1v11M2 21h20"/><path d="M8 8h3M8 12h3M8 16h3"/></symbol>
+    <symbol id="i-factory" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V10l6 4v-4l6 4V5h4v16z"/><path d="M2 21h20"/></symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1 13H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M6 11l6-6 6 6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h3.5l1.5 5-2.2 1.3a12 12 0 0 0 6.9 6.9L16 14l5 1.5V19a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6 8.5 7 8.5-7"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l1.4-4A8 8 0 1 1 8.6 19z"/><path d="M9 10.5c.3 1.8 1.7 3.2 3.5 3.5l1-1 1.8.8"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 3 5 14h6l-1 7 8-11h-6z"/></symbol>
+    <symbol id="i-speech" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/><path d="M8.5 11h7M8.5 14h4"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol>
+  </defs>
+</svg>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>Free registration for candidates &middot; <strong>No fees, ever</strong></span>
+    <div class="topbar-links">
+      <a href="tel:+910000000000"><svg class="ico"><use href="#i-phone"/></svg>+91 00000 00000</a>
+      <a class="hide-sm" href="mailto:info@asterconsultancyservices.com"><svg class="ico"><use href="#i-mail"/></svg>info@asterconsultancyservices.com</a>
+    </div>
+  </div>
+</div>
+
+<header id="hdr">
   <nav class="wrap nav" aria-label="Main">
     <a class="brand" href="#top" aria-label="Aster Consultancy Services home">
       <div class="mark" aria-hidden="true">A<span>C</span>S</div>
       <div class="brand-name">Aster Consultancy<small>Services</small></div>
     </a>
-    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="links">&#9776;</button>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="links"><svg class="ico"><use href="#i-menu"/></svg></button>
     <ul class="nav-links" id="links">
       <li><a href="#services">Services</a></li>
+      <li><a href="#industries">Industries</a></li>
+      <li><a href="#roles">Roles</a></li>
       <li><a href="#employers">Employers</a></li>
-      <li><a href="#candidates">Candidates</a></li>
       <li><a href="#process">How it works</a></li>
-      <li><a class="btn btn-primary" href="#contact">Contact us</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a class="btn" href="#contact">Contact us</a></li>
     </ul>
   </nav>
 </header>
 
-<main id="top">
+<main id="main">
+  <span id="top"></span>
+
+  <!-- Hero -->
   <section class="hero" style="padding:0">
+    <div class="ring ring-1" aria-hidden="true"></div>
+    <div class="ring ring-2" aria-hidden="true"></div>
     <div class="wrap hero-grid">
       <div>
-        <h1>The right people, placed where they matter.</h1>
-        <p>Aster Consultancy Services finds doctors, nurses, HR professionals and skilled staff for organisations that can't afford a wrong hire.</p>
+        <span class="pill"><b>ALL-IN-ONE</b> Recruitment &middot; Staffing &middot; HR</span>
+        <h1>The right <span class="rot" id="rot">people</span>,<br>placed where they matter.</h1>
+        <p class="sub">Aster Consultancy Services finds doctors, nurses, HR professionals and skilled staff for organisations that can't afford a wrong hire.</p>
         <div class="actions">
-          <a class="btn btn-primary" href="#contact">Hire with us</a>
-          <a class="btn btn-ghost" href="#candidates">Find a job</a>
+          <a class="btn btn-primary" href="#contact" data-mode="employer">Hire with us <svg class="ico"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-ghost" href="#roles">Find a job</a>
         </div>
-      </div>
-      <aside class="board" aria-label="Roles we recruit for">
-        <h3>Roles we fill <span class="live">Hiring now</span></h3>
-        <ul>
-          <li><span class="role">Doctors &amp; specialists</span><span class="where">Hospitals, clinics, diagnostic centres</span><span class="tag hot">Healthcare</span></li>
-          <li><span class="role">Staff &amp; ICU nurses</span><span class="where">Inpatient, critical care, home care</span><span class="tag hot">Healthcare</span></li>
-          <li><span class="role">HR managers &amp; executives</span><span class="where">Corporate, manufacturing, services</span><span class="tag">HR</span></li>
-          <li><span class="role">Admin, sales &amp; operations</span><span class="where">Full-time, contract and bulk hiring</span><span class="tag">General</span></li>
+        <ul class="assure">
+          <li><svg class="ico"><use href="#i-check"/></svg>Verified candidates</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Free for job seekers</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Reply in 1 working day</li>
         </ul>
-        <p class="board-note">Tell us the role. We'll send a shortlist of screened candidates.</p>
+      </div>
+      <aside class="hero-visual" aria-label="How we screen every candidate: qualification, registration, experience and references are checked before an interview is scheduled">
+        <div class="stack s1" aria-hidden="true"></div>
+        <div class="stack s2" aria-hidden="true"></div>
+        <div class="vcard" aria-hidden="true">
+          <div class="vc-head">Candidate screening <span class="live">Live</span></div>
+          <div class="vc-profile" id="vc-profile">
+            <span class="avatar"><svg class="ico"><use id="vc-icon" href="#i-heart"/></svg></span>
+            <div><b id="vc-role">Staff nurse, ICU</b><span class="meta" id="vc-meta">B.Sc Nursing &middot; 5 yrs experience</span></div>
+            <span class="tag hot" id="vc-tag">Healthcare</span>
+          </div>
+          <ul class="vc-checks" id="vc-checks">
+            <li><span class="ck"><svg class="ico"><use href="#i-check"/></svg></span><span>Qualification verified</span></li>
+            <li><span class="ck"><svg class="ico"><use href="#i-check"/></svg></span><span>Nursing council registration</span></li>
+            <li><span class="ck"><svg class="ico"><use href="#i-check"/></svg></span><span>Experience &amp; references</span></li>
+            <li><span class="ck"><svg class="ico"><use href="#i-check"/></svg></span><span>Interview scheduled</span></li>
+          </ul>
+          <div class="vc-bar"><span id="vc-fill"></span></div>
+          <div class="vc-foot"><span id="vc-step">Step 0 of 4</span><span class="vc-status" id="vc-status">Screening</span></div>
+        </div>
+        <div class="float-card f1" aria-hidden="true">
+          <span class="dot"><svg class="ico"><use href="#i-shield"/></svg></span>
+          <span><b>Credentials checked</b>before you meet anyone</span>
+        </div>
+        <div class="float-card f2" aria-hidden="true">
+          <span class="dot"><svg class="ico"><use href="#i-bolt"/></svg></span>
+          <span><b>Shortlists, not CV piles</b>only screened profiles</span>
+        </div>
       </aside>
     </div>
   </section>
 
+  <!-- Stats -->
+  <div class="stats">
+    <div class="wrap">
+      <div class="stats-grid reveal">
+        <div class="stat"><b><span data-count="8">8</span></b><span>Services under one roof</span></div>
+        <div class="stat"><b><span data-count="10">10</span><em>+</em></b><span>Industries we recruit for</span></div>
+        <div class="stat"><b><em>&#8377;</em>0</b><span>Fee charged to candidates</span></div>
+        <div class="stat"><b><span data-count="1">1</span> <em>day</em></b><span>To reply to every enquiry</span></div>
+      </div>
+    </div>
+    <div class="marquee">
+      <p>Recruiting across sectors</p>
+      <div class="track-mask">
+        <ul class="track" aria-label="Sectors we recruit for">
+          <li>Hospitals</li><li>Clinics</li><li>Diagnostic centres</li><li>Home care</li><li>Pharma</li><li>Manufacturing</li><li>IT &amp; software</li><li>Banking &amp; finance</li><li>Retail</li><li>Hospitality</li><li>Logistics</li><li>Education</li>
+          <li aria-hidden="true">Hospitals</li><li aria-hidden="true">Clinics</li><li aria-hidden="true">Diagnostic centres</li><li aria-hidden="true">Home care</li><li aria-hidden="true">Pharma</li><li aria-hidden="true">Manufacturing</li><li aria-hidden="true">IT &amp; software</li><li aria-hidden="true">Banking &amp; finance</li><li aria-hidden="true">Retail</li><li aria-hidden="true">Hospitality</li><li aria-hidden="true">Logistics</li><li aria-hidden="true">Education</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Services -->
   <section id="services">
     <div class="wrap">
-      <div class="section-head">
-        <h2>Recruitment and HR, handled end to end.</h2>
+      <div class="section-head reveal">
+        <div>
+          <span class="eyebrow">What we do</span>
+          <h2>Recruitment and HR, handled <em>end to end.</em></h2>
+        </div>
         <p class="lead">From one critical hire to a full team, we take on the search, screening and paperwork so you can focus on running your organisation.</p>
       </div>
       <div class="services">
-        <article class="svc feature">
-          <div class="icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></div>
+        <article class="svc feature reveal">
+          <div class="icon" aria-hidden="true"><svg class="ico"><use href="#i-plus"/></svg></div>
           <h3>Healthcare staffing</h3>
           <p>Qualified doctors, nurses and allied health professionals for hospitals, clinics and care providers. We verify registrations, qualifications and experience before you meet anyone.</p>
-          <ul class="chips"><li>Doctors</li><li>Specialists</li><li>Staff nurses</li><li>ICU &amp; OT nurses</li><li>Lab &amp; technicians</li><li>Pharmacists</li></ul>
+          <ul class="chips"><li>Doctors</li><li>Specialists</li><li>Staff nurses</li><li>ICU &amp; OT nurses</li><li>Lab &amp; technicians</li><li>Pharmacists</li><li>Hospital admin</li></ul>
+          <button class="svc-link" data-service="Healthcare staffing">Request healthcare staff <svg class="ico"><use href="#i-arrow"/></svg></button>
         </article>
-        <article class="svc side">
-          <div class="icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.5 3.4-5.5 6.5-5.5s5.7 2 6.5 5.5"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18 14.8c1.9.8 3.1 2.5 3.5 5.2"/></svg></div>
-          <h3>Recruitment</h3>
-          <p>Permanent, contract and bulk hiring across corporate and industry roles, from entry level to senior management.</p>
-          <ul class="chips"><li>Permanent</li><li>Contract</li><li>Bulk hiring</li><li>Executive search</li></ul>
+        <article class="svc reveal">
+          <div class="icon" aria-hidden="true"><svg class="ico"><use href="#i-users"/></svg></div>
+          <h3>Permanent recruitment</h3>
+          <p>Full-time hiring across corporate and industry roles, from entry level to senior management.</p>
+          <button class="svc-link" data-service="Permanent recruitment">Enquire <svg class="ico"><use href="#i-arrow"/></svg></button>
         </article>
-        <article class="svc third">
-          <div class="icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></div>
+        <article class="svc reveal">
+          <div class="icon" aria-hidden="true"><svg class="ico"><use href="#i-clock"/></svg></div>
+          <h3>Contract &amp; temporary staffing</h3>
+          <p>Flexible staff for projects, seasonal peaks, leave cover and short-term needs, on our rolls or yours.</p>
+          <button class="svc-link" data-service="Contract &amp; temporary staffing">Enquire <svg class="ico"><use href="#i-arrow"/></svg></button>
+        </article>
+        <article class="svc reveal">
+          <div class="icon" aria-hidden="true"><svg class="ico"><use href="#i-layers"/></svg></div>
+          <h3>Bulk hiring</h3>
+          <p>Opening a new unit or scaling fast? We run high-volume drives and walk-ins with consistent screening.</p>
+          <button class="svc-link" data-service="Bulk hiring">Enquire <svg class="ico"><use href="#i-arrow"/></svg></button>
+        </article>
+        <article class="svc reveal">
+          <div class="icon" aria-hidden="true"><svg class="ico"><use href="#i-crown"/></svg></div>
+          <h3>Executive search</h3>
+          <p>Discreet, targeted search for leadership and specialist roles where the right fit matters most.</p>
+          <button class="svc-link" data-service="Executive search">Enquire <svg class="ico"><use href="#i-arrow"/></svg></button>
+        </article>
+        <article class="svc reveal">
+          <div class="icon" aria-hidden="true"><svg class="ico"><use href="#i-doc"/></svg></div>
           <h3>HR consultancy</h3>
-          <p>HR policies, onboarding, payroll support and compliance for growing businesses without a full HR team.</p>
+          <p>HR policies, handbooks, onboarding and performance processes for businesses without a full HR team.</p>
+          <button class="svc-link" data-service="HR consultancy">Enquire <svg class="ico"><use href="#i-arrow"/></svg></button>
         </article>
-        <article class="svc third">
-          <div class="icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5M8 11l2 2 4-4"/></svg></div>
+        <article class="svc reveal">
+          <div class="icon" aria-hidden="true"><svg class="ico"><use href="#i-cash"/></svg></div>
+          <h3>Payroll &amp; compliance</h3>
+          <p>Salary processing, statutory deductions and labour-law compliance, handled accurately every month.</p>
+          <button class="svc-link" data-service="Payroll &amp; compliance">Enquire <svg class="ico"><use href="#i-arrow"/></svg></button>
+        </article>
+        <article class="svc reveal">
+          <div class="icon" aria-hidden="true"><svg class="ico"><use href="#i-check-search"/></svg></div>
           <h3>Screening &amp; verification</h3>
           <p>Background, reference and document checks so every candidate you see is who they say they are.</p>
-        </article>
-        <article class="svc third">
-          <div class="icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16v12H4z"/><path d="M9 7V5h6v2M4 12h16"/></svg></div>
-          <h3>Other staffing services</h3>
-          <p>Support staff, administration, sales and operations roles. If you need people, ask us.</p>
+          <button class="svc-link" data-service="Screening &amp; verification">Enquire <svg class="ico"><use href="#i-arrow"/></svg></button>
         </article>
       </div>
     </div>
   </section>
 
+  <!-- Industries -->
+  <section class="ind-sec" id="industries">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <span class="eyebrow">Industries</span>
+          <h2>Specialists in <em>healthcare.</em> Trusted across sectors.</h2>
+        </div>
+        <p class="lead">Every industry hires differently. Pick yours to see the roles we fill and what we take care of.</p>
+      </div>
+      <div class="tabs reveal" role="tablist" aria-label="Industries">
+        <button class="tab" role="tab" id="t-health" aria-controls="p-health" aria-selected="true"><svg class="ico"><use href="#i-heart"/></svg>Healthcare</button>
+        <button class="tab" role="tab" id="t-corp" aria-controls="p-corp" aria-selected="false" tabindex="-1"><svg class="ico"><use href="#i-building"/></svg>Corporate &amp; IT</button>
+        <button class="tab" role="tab" id="t-mfg" aria-controls="p-mfg" aria-selected="false" tabindex="-1"><svg class="ico"><use href="#i-factory"/></svg>Manufacturing &amp; logistics</button>
+        <button class="tab" role="tab" id="t-retail" aria-controls="p-retail" aria-selected="false" tabindex="-1"><svg class="ico"><use href="#i-bag"/></svg>Retail &amp; hospitality</button>
+      </div>
+
+      <div class="ind-panel" role="tabpanel" id="p-health" aria-labelledby="t-health">
+        <div class="ind-main">
+          <h3>Healthcare</h3>
+          <p>Hospitals, nursing homes, clinics, diagnostic labs and home-care providers rely on us for clinical and non-clinical staff. We understand registrations, shift patterns and the urgency of an unfilled ward.</p>
+          <ul class="chips"><li>Doctors (MBBS / MD / MS)</li><li>Consultants</li><li>Staff nurses (GNM / B.Sc)</li><li>ICU, OT &amp; ER nurses</li><li>Lab &amp; radiology technicians</li><li>Pharmacists</li><li>Medical officers</li><li>Front office &amp; billing</li></ul>
+        </div>
+        <div class="ind-side">
+          <h4>What we handle</h4>
+          <ul class="ticks"><li>Medical council &amp; nursing registration checks</li><li>Experience and reference verification</li><li>Urgent and night-shift requirements</li><li>Joining formalities and follow-up</li></ul>
+          <button class="btn btn-light" data-service="Healthcare staffing">Request healthcare staff <svg class="ico"><use href="#i-arrow"/></svg></button>
+        </div>
+      </div>
+
+      <div class="ind-panel" role="tabpanel" id="p-corp" aria-labelledby="t-corp" hidden>
+        <div class="ind-main">
+          <h3>Corporate &amp; IT</h3>
+          <p>Offices, startups, banks and service firms hire with us for business, technology and support functions, from a single analyst to a full department.</p>
+          <ul class="chips"><li>HR managers &amp; executives</li><li>Accounts &amp; finance</li><li>Sales &amp; business development</li><li>Software developers</li><li>IT support</li><li>Customer service</li><li>Admin &amp; front office</li></ul>
+        </div>
+        <div class="ind-side">
+          <h4>What we handle</h4>
+          <ul class="ticks"><li>Skills and role-fit screening</li><li>Interview scheduling and feedback</li><li>Salary benchmarking and offers</li><li>Onboarding and payroll setup</li></ul>
+          <button class="btn btn-light" data-service="Permanent recruitment">Share a requirement <svg class="ico"><use href="#i-arrow"/></svg></button>
+        </div>
+      </div>
+
+      <div class="ind-panel" role="tabpanel" id="p-mfg" aria-labelledby="t-mfg" hidden>
+        <div class="ind-main">
+          <h3>Manufacturing &amp; logistics</h3>
+          <p>Plants, warehouses and distribution centres need dependable people on every shift. We supply supervisors, technicians and workforce at volume, on permanent or contract terms.</p>
+          <ul class="chips"><li>Plant &amp; production supervisors</li><li>Quality inspectors</li><li>Machine operators</li><li>Maintenance technicians</li><li>Warehouse staff</li><li>Drivers &amp; delivery</li><li>Store keepers</li></ul>
+        </div>
+        <div class="ind-side">
+          <h4>What we handle</h4>
+          <ul class="ticks"><li>Bulk drives and walk-in interviews</li><li>Contract staffing on our payroll</li><li>Statutory compliance (PF, ESI)</li><li>Attendance and replacement support</li></ul>
+          <button class="btn btn-light" data-service="Bulk hiring">Plan a hiring drive <svg class="ico"><use href="#i-arrow"/></svg></button>
+        </div>
+      </div>
+
+      <div class="ind-panel" role="tabpanel" id="p-retail" aria-labelledby="t-retail" hidden>
+        <div class="ind-main">
+          <h3>Retail &amp; hospitality</h3>
+          <p>Stores, hotels, restaurants and facility providers count on us for customer-facing teams that show up, stay and represent your brand well.</p>
+          <ul class="chips"><li>Store managers</li><li>Sales associates</li><li>Front desk &amp; guest relations</li><li>Chefs &amp; kitchen staff</li><li>Housekeeping</li><li>Security &amp; facility staff</li></ul>
+        </div>
+        <div class="ind-side">
+          <h4>What we handle</h4>
+          <ul class="ticks"><li>Seasonal and festive peak staffing</li><li>Background checks for cash-handling roles</li><li>Training and induction support</li><li>Quick replacements</li></ul>
+          <button class="btn btn-light" data-service="Contract &amp; temporary staffing">Request staff <svg class="ico"><use href="#i-arrow"/></svg></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Roles finder -->
+  <section id="roles">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <span class="eyebrow">For job seekers</span>
+          <h2>Find your <em>next role</em> with us.</h2>
+        </div>
+        <p class="lead">Search by job title or filter by field. Pick a role to send us your details, and we'll match you to current openings.</p>
+      </div>
+      <div class="finder reveal">
+        <label class="search"><span class="sr-only">Search roles</span><svg class="ico"><use href="#i-search"/></svg><input id="role-q" type="search" placeholder="Search e.g. nurse, HR, sales"></label>
+        <div class="filters" role="group" aria-label="Filter by field">
+          <button class="filter" data-f="all" aria-pressed="true">All</button>
+          <button class="filter" data-f="health" aria-pressed="false">Healthcare</button>
+          <button class="filter" data-f="hr" aria-pressed="false">HR</button>
+          <button class="filter" data-f="corp" aria-pressed="false">Corporate</button>
+          <button class="filter" data-f="ops" aria-pressed="false">Operations &amp; support</button>
+        </div>
+      </div>
+      <ul class="roles" id="role-list">
+        <li class="role-card" data-cat="health"><div class="role-top"><h3>Doctors &amp; medical officers</h3><span class="tag hot">Healthcare</span></div><p>MBBS, MD and MS for hospitals and clinics</p><div class="role-meta"><span class="type">Full-time &middot; Contract</span><button class="apply">Apply <svg class="ico"><use href="#i-arrow"/></svg></button></div></li>
+        <li class="role-card" data-cat="health"><div class="role-top"><h3>Specialist consultants</h3><span class="tag hot">Healthcare</span></div><p>Cardiology, paediatrics, gynaecology and more</p><div class="role-meta"><span class="type">Full-time &middot; Visiting</span><button class="apply">Apply <svg class="ico"><use href="#i-arrow"/></svg></button></div></li>
+        <li class="role-card" data-cat="health"><div class="role-top"><h3>Staff nurses</h3><span class="tag hot">Healthcare</span></div><p>GNM and B.Sc nursing for wards and OPD</p><div class="role-meta"><span class="type">Full-time</span><button class="apply">Apply <svg class="ico"><use href="#i-arrow"/></svg></button></div></li>
+        <li class="role-card" data-cat="health"><div class="role-top"><h3>ICU, OT &amp; ER nurses</h3><span class="tag hot">Healthcare</span></div><p>Critical care and theatre experience</p><div class="role-meta"><span class="type">Full-time &middot; Shifts</span><button class="apply">Apply <svg class="ico"><use href="#i-arrow"/></svg></button></div></li>
+        <li class="role-card" data-cat="health"><div class="role-top"><h3>Lab &amp; radiology technicians</h3><span class="tag hot">Healthcare</span></div><p>DMLT, BMLT, X-ray and imaging</p><div class="role-meta"><span class="type">Full-time</span><button class="apply">Apply <svg class="ico"><use href="#i-arrow"/></svg></button></div></li>
+        <li class="role-card" data-cat="health"><div class="role-top"><h3>Pharmacists</h3><span class="tag hot">Healthcare</span></div><p>D.Pharm and B.Pharm, hospital and retail</p><div class="role-meta"><span class="type">Full-time</span><button class="apply">Apply <svg class="ico"><use href="#i-arrow"/></svg></button></div></li>
+        <li class="role-card" data-cat="hr"><div class="role-top"><h3>HR managers</h3><span class="tag">HR</span></div><p>Generalist and HR business partner roles</p><div class="role-meta"><span class="type">Full-time</span><button class="apply">Apply <svg class="ico"><use href="#i-arrow"/></svg></button></div></li>
+        <li class="role-card" data-cat="hr"><div class="role-top"><h3>HR executives &amp; recruiters</h3><span class="tag">HR</span></div><p>Talent acquisition and HR operations</p><div class="role-meta"><span class="type">Full-time</span><button class="apply">Apply <svg class="ico"><use href="#i-arrow"/></svg></button></div></li>
+        <li class="role-card" data-cat="hr"><div class="role-top"><h3>Payroll executives</h3><span class="tag">HR</span></div><p>Salary processing, PF and ESI</p><div class="role-meta"><span class="type">Full-time</span><button class="apply">Apply <svg class="ico"><use href="#i-arrow"/></svg></button></div></li>
+        <li class="role-card" data-cat="corp"><div class="role-top"><h3>Sales &amp; business development</h3><span class="tag">Corporate</span></div><p>Field sales, inside sales and key accounts</p><div class="role-meta"><span class="type">Full-time</span><button class="apply">Apply <svg class="ico"><use href="#i-arrow"/></svg></button></div></li>
+        <li class="role-card" data-cat="corp"><div class="role-top"><h3>Accounts &amp; finance</h3><span class="tag">Corporate</span></div><p>Accountants, tally and finance executives</p><div class="role-meta"><span class="type">Full-time</span><button class="apply">Apply <svg class="ico"><use href="#i-arrow"/></svg></button></div></li>
+        <li class="role-card" data-cat="corp"><div class="role-top"><h3>IT &amp; software</h3><span class="tag">Corporate</span></div><p>Developers, IT support and system admins</p><div class="role-meta"><span class="type">Full-time &middot; Contract</span><button class="apply">Apply <svg class="ico"><use href="#i-arrow"/></svg></button></div></li>
+        <li class="role-card" data-cat="ops"><div class="role-top"><h3>Admin &amp; front office</h3><span class="tag">Support</span></div><p>Receptionists, office and admin executives</p><div class="role-meta"><span class="type">Full-time</span><button class="apply">Apply <svg class="ico"><use href="#i-arrow"/></svg></button></div></li>
+        <li class="role-card" data-cat="ops"><div class="role-top"><h3>Customer support</h3><span class="tag">Support</span></div><p>Voice, chat and email support</p><div class="role-meta"><span class="type">Full-time &middot; Shifts</span><button class="apply">Apply <svg class="ico"><use href="#i-arrow"/></svg></button></div></li>
+        <li class="role-card" data-cat="ops"><div class="role-top"><h3>Warehouse &amp; logistics</h3><span class="tag">Support</span></div><p>Pickers, packers, store keepers, drivers</p><div class="role-meta"><span class="type">Contract &middot; Bulk</span><button class="apply">Apply <svg class="ico"><use href="#i-arrow"/></svg></button></div></li>
+        <li class="role-card" data-cat="ops"><div class="role-top"><h3>Housekeeping &amp; facility</h3><span class="tag">Support</span></div><p>Hospital, hotel and office facility staff</p><div class="role-meta"><span class="type">Contract</span><button class="apply">Apply <svg class="ico"><use href="#i-arrow"/></svg></button></div></li>
+      </ul>
+      <p class="empty" id="role-empty" hidden>No matching roles. <a href="#contact" data-mode="candidate">Send us your CV anyway</a> and we'll keep you in mind.</p>
+      <div class="more-wrap">
+        <p class="count" id="role-count" aria-live="polite"></p>
+        <button class="btn btn-ghost" id="role-more" aria-controls="role-list" hidden>Show all roles</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Audience split -->
   <section class="split-sec" id="employers">
     <div class="wrap split">
-      <div class="aud">
+      <div class="aud dark reveal">
         <h3>For employers</h3>
         <p class="lead">Share your requirement once. We do the searching.</p>
-        <ul>
+        <ul class="ticks">
           <li>Pre-screened shortlists, not piles of CVs</li>
           <li>Credentials and references checked for you</li>
           <li>One point of contact from brief to joining</li>
           <li>Replacement support if a hire doesn't work out</li>
         </ul>
-        <a class="btn btn-primary" href="#contact">Share a requirement</a>
+        <a class="btn btn-primary" href="#contact" data-mode="employer">Share a requirement <svg class="ico"><use href="#i-arrow"/></svg></a>
       </div>
-      <div class="aud" id="candidates">
+      <div class="aud reveal" id="candidates">
         <h3>For candidates</h3>
         <p class="lead">Doctors, nurses and professionals looking for their next role.</p>
-        <ul>
+        <ul class="ticks">
           <li>Free registration, no charges to candidates</li>
           <li>Roles matched to your skills and location</li>
           <li>Help with your CV and interview preparation</li>
           <li>Updates at every stage of the process</li>
         </ul>
-        <a class="btn btn-ghost" href="#contact">Register your CV</a>
+        <a class="btn btn-ghost" href="#contact" data-mode="candidate">Register your CV <svg class="ico"><use href="#i-arrow"/></svg></a>
       </div>
     </div>
   </section>
 
+  <!-- Process -->
   <section id="process">
     <div class="wrap">
-      <div class="section-head">
-        <h2>How a hire works with us.</h2>
+      <div class="center-head reveal">
+        <span class="eyebrow">How it works</span>
+        <h2>How a hire works <em>with us.</em></h2>
         <p class="lead">A clear process, so you always know what happens next.</p>
       </div>
       <div class="steps">
-        <div class="step"><h3>Understand the role</h3><p>We learn what the position needs: skills, experience, shifts and culture.</p></div>
-        <div class="step"><h3>Search &amp; screen</h3><p>We source candidates and check qualifications, licences and references.</p></div>
-        <div class="step"><h3>Shortlist &amp; interview</h3><p>You meet only the strongest matches. We arrange the interviews.</p></div>
-        <div class="step"><h3>Offer &amp; onboard</h3><p>We handle offers and joining formalities, and follow up after they start.</p></div>
+        <div class="steps-line reveal" aria-hidden="true"><span></span></div>
+        <div class="step reveal"><div class="step-num"><svg class="ico"><use href="#i-speech"/></svg></div><h3>Understand the role</h3><p>We learn what the position needs: skills, experience, shifts and culture.</p></div>
+        <div class="step reveal"><div class="step-num"><svg class="ico"><use href="#i-search"/></svg></div><h3>Search &amp; screen</h3><p>We source candidates and check qualifications, licences and references.</p></div>
+        <div class="step reveal"><div class="step-num"><svg class="ico"><use href="#i-users"/></svg></div><h3>Shortlist &amp; interview</h3><p>You meet only the strongest matches. We arrange the interviews.</p></div>
+        <div class="step reveal"><div class="step-num"><svg class="ico"><use href="#i-check"/></svg></div><h3>Offer &amp; onboard</h3><p>We handle offers and joining formalities, and follow up after they start.</p></div>
       </div>
     </div>
   </section>
 
+  <!-- Why -->
   <section style="padding-top:0">
     <div class="wrap why">
-      <h2>Why organisations choose Aster.</h2>
+      <div class="reveal">
+        <span class="eyebrow">Why Aster</span>
+        <h2>Why organisations choose <em>Aster.</em></h2>
+        <p class="lead">We'd rather send you three people worth meeting than thirty you have to filter yourself.</p>
+      </div>
       <div class="facts">
-        <div class="fact"><h3>Healthcare know-how</h3><p>We understand clinical roles, registrations and the realities of hospital staffing.</p></div>
-        <div class="fact"><h3>Quality over volume</h3><p>Fewer, better candidates means less of your time spent interviewing.</p></div>
-        <div class="fact"><h3>Fast turnaround</h3><p>Urgent requirement? We prioritise shortlists for time-critical roles.</p></div>
-        <div class="fact"><h3>Honest communication</h3><p>Straight answers on timelines, availability and salaries.</p></div>
+        <div class="fact reveal"><div class="icon"><svg class="ico"><use href="#i-heart"/></svg></div><h3>Healthcare know-how</h3><p>We understand clinical roles, registrations and the realities of hospital staffing.</p></div>
+        <div class="fact reveal"><div class="icon"><svg class="ico"><use href="#i-target"/></svg></div><h3>Quality over volume</h3><p>Fewer, better candidates means less of your time spent interviewing.</p></div>
+        <div class="fact reveal"><div class="icon"><svg class="ico"><use href="#i-bolt"/></svg></div><h3>Fast turnaround</h3><p>Urgent requirement? We prioritise shortlists for time-critical roles.</p></div>
+        <div class="fact reveal"><div class="icon"><svg class="ico"><use href="#i-speech"/></svg></div><h3>Honest communication</h3><p>Straight answers on timelines, availability and salaries.</p></div>
       </div>
     </div>
   </section>
 
+  <!-- FAQ -->
+  <section class="faq-sec" id="faq">
+    <div class="wrap faq">
+      <div class="reveal">
+        <span class="eyebrow">FAQ</span>
+        <h2>Questions people <em>ask us.</em></h2>
+        <p class="lead">Can't find your answer? Call or message us and we'll explain.</p>
+        <a class="btn btn-ghost" href="#contact">Ask a question</a>
+      </div>
+      <div class="faq-list reveal">
+        <details open><summary>Do candidates have to pay anything?<span class="pm" aria-hidden="true"></span></summary><p>No. Registration and placement are completely free for candidates. Our fees are paid by employers.</p></details>
+        <details><summary>How quickly can you send a shortlist?<span class="pm" aria-hidden="true"></span></summary><p>It depends on the role and location. We reply to every enquiry within one working day with a realistic timeline, and urgent or time-critical roles are prioritised.</p></details>
+        <details><summary>How do you verify candidates?<span class="pm" aria-hidden="true"></span></summary><p>We check qualifications, professional registrations (for doctors and nurses), work experience and references before a candidate reaches you. Background checks are available on request.</p></details>
+        <details><summary>What if a hire doesn't work out?<span class="pm" aria-hidden="true"></span></summary><p>We offer replacement support if a placed candidate leaves early. The replacement terms are agreed with you before we start.</p></details>
+        <details><summary>Can you manage payroll for contract staff?<span class="pm" aria-hidden="true"></span></summary><p>Yes. Contract staff can be placed on our payroll, and we take care of salaries, statutory deductions and compliance so you get one simple monthly invoice.</p></details>
+        <details><summary>Which locations do you recruit for?<span class="pm" aria-hidden="true"></span></summary><p>Tell us where the role is based. We'll tell you honestly whether we can fill it and how long it's likely to take.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="wrap">
+      <div class="cta-box reveal">
+        <div>
+          <h2>Need staff <em>urgently?</em></h2>
+          <p>Call us now or message on WhatsApp. We'll start the search today.</p>
+        </div>
+        <div class="actions">
+          <a class="btn btn-light" href="tel:+910000000000"><svg class="ico"><use href="#i-phone"/></svg>Call now</a>
+          <a class="btn btn-wa wa-link" href="#contact" target="_blank" rel="noopener"><svg class="ico"><use href="#i-chat"/></svg>WhatsApp us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
   <section class="contact" id="contact">
     <div class="wrap contact-grid">
-      <div>
-        <h2>Let's talk about your hiring.</h2>
+      <div class="reveal">
+        <span class="eyebrow">Contact</span>
+        <h2>Let's talk about <em>your hiring.</em></h2>
         <p class="lead">Employers and candidates can reach us directly, or send a message and we'll get back to you within one working day.</p>
         <ul class="details">
-          <li><span>Phone</span><a href="tel:+910000000000">+91 00000 00000</a></li>
-          <li><span>Email</span><a href="mailto:info@asterconsultancyservices.com">info@asterconsultancyservices.com</a></li>
-          <li><span>Office</span>Your office address here</li>
+          <li><span class="d-ico"><svg class="ico"><use href="#i-phone"/></svg></span><div><span>Phone</span><a href="tel:+910000000000">+91 00000 00000</a></div></li>
+          <li><span class="d-ico"><svg class="ico"><use href="#i-mail"/></svg></span><div><span>Email</span><a href="mailto:info@asterconsultancyservices.com">info@asterconsultancyservices.com</a></div></li>
+          <li><span class="d-ico"><svg class="ico"><use href="#i-pin"/></svg></span><div><span>Office</span>Your office address here</div></li>
         </ul>
       </div>
-      <form id="enquiry" novalidate>
-        <div class="row">
-          <label>Name<input name="name" required autocomplete="name"></label>
-          <label>Phone<input name="phone" type="tel" required autocomplete="tel"></label>
+      <form id="enquiry" class="reveal" novalidate>
+        <div class="seg" role="radiogroup" aria-label="I am">
+          <input type="radio" name="mode" id="m-emp" value="employer" checked><label for="m-emp"><svg class="ico"><use href="#i-building"/></svg>I'm hiring</label>
+          <input type="radio" name="mode" id="m-cand" value="candidate"><label for="m-cand"><svg class="ico"><use href="#i-brief"/></svg>I want a job</label>
         </div>
-        <label>Email<input name="email" type="email" autocomplete="email"></label>
-        <label>I am
-          <select name="type">
-            <option>An employer looking to hire</option>
-            <option>A candidate looking for a job</option>
-          </select>
-        </label>
-        <label>Message<textarea name="message" placeholder="Role, number of positions, location, or your experience"></textarea></label>
-        <button class="btn btn-primary" type="submit">Send message</button>
-        <p class="form-note" id="form-note">This opens your email app with the message filled in.</p>
+        <div class="row">
+          <label class="field">Name <span class="req" aria-hidden="true">*</span><input name="name" required autocomplete="name"><span class="err">Please enter your name.</span></label>
+          <label class="field">Phone <span class="req" aria-hidden="true">*</span><input name="phone" type="tel" required autocomplete="tel" inputmode="tel"><span class="err">Please enter a valid phone number.</span></label>
+        </div>
+        <div class="row">
+          <label class="field">Email<input name="email" type="email" autocomplete="email"><span class="err">That email doesn't look right.</span></label>
+          <label class="field">City<input name="city" autocomplete="address-level2"></label>
+        </div>
+        <div class="mode-fields" data-for="employer">
+          <div class="row">
+            <label class="field">Organisation<input name="org" autocomplete="organization"></label>
+            <label class="field">Positions<input name="positions" type="number" min="1" placeholder="e.g. 5"></label>
+          </div>
+          <label class="field">Service needed
+            <select name="service">
+              <option>Healthcare staffing</option>
+              <option>Permanent recruitment</option>
+              <option>Contract &amp; temporary staffing</option>
+              <option>Bulk hiring</option>
+              <option>Executive search</option>
+              <option>HR consultancy</option>
+              <option>Payroll &amp; compliance</option>
+              <option>Screening &amp; verification</option>
+              <option>Something else</option>
+            </select>
+          </label>
+        </div>
+        <div class="mode-fields" data-for="candidate" hidden>
+          <div class="row">
+            <label class="field">Role you want<input name="role" placeholder="e.g. Staff nurse"></label>
+            <label class="field">Experience
+              <select name="exp"><option>Fresher</option><option>1–3 years</option><option>3–5 years</option><option>5–10 years</option><option>10+ years</option></select>
+            </label>
+          </div>
+          <label class="field">Qualification<input name="qual" placeholder="e.g. B.Sc Nursing, MBA HR"></label>
+        </div>
+        <label class="field">Message<textarea name="message" placeholder="Role details, shifts, salary range, or anything else we should know"></textarea></label>
+        <div class="form-actions">
+          <button class="btn btn-primary" type="submit"><svg class="ico"><use href="#i-mail"/></svg>Send by email</button>
+          <button class="btn btn-wa" type="button" id="send-wa"><svg class="ico"><use href="#i-chat"/></svg>Send on WhatsApp</button>
+        </div>
+        <p class="form-note" id="form-note" aria-live="polite">Your message opens in your email app or WhatsApp, ready to send.</p>
       </form>
     </div>
   </section>
 </main>
 
 <footer>
-  <div class="wrap foot">
-    <span>&copy; <span id="yr">2026</span> Aster Consultancy Services. All rights reserved.</span>
-    <span>HR &bull; Recruitment &bull; Healthcare staffing</span>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="#top" aria-label="Aster Consultancy Services home">
+          <div class="mark" aria-hidden="true">A<span>C</span>S</div>
+          <div class="brand-name">Aster Consultancy<small>Services</small></div>
+        </a>
+        <p class="foot-about">Recruitment, healthcare staffing and HR consultancy. The right people, placed where they matter.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Healthcare staffing</a></li>
+          <li><a href="#services">Recruitment</a></li>
+          <li><a href="#services">HR consultancy</a></li>
+          <li><a href="#services">Payroll &amp; compliance</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#industries">Industries</a></li>
+          <li><a href="#roles">Find a job</a></li>
+          <li><a href="#process">How it works</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get in touch</h4>
+        <ul>
+          <li><a href="tel:+910000000000">+91 00000 00000</a></li>
+          <li><a href="mailto:info@asterconsultancyservices.com">info@asterconsultancyservices.com</a></li>
+          <li>Your office address here</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; <span id="yr">2026</span> Aster Consultancy Services. All rights reserved.</span>
+      <span>HR &bull; Recruitment &bull; Healthcare staffing</span>
+    </div>
   </div>
 </footer>
 
+<div class="fab">
+  <button class="fab-top" id="to-top" aria-label="Back to top"><svg class="ico"><use href="#i-up"/></svg></button>
+  <a class="fab-wa wa-link" href="#contact" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg class="ico"><use href="#i-chat"/></svg></a>
+</div>
+
+<nav class="mbar" aria-label="Quick contact">
+  <a href="tel:+910000000000"><svg class="ico"><use href="#i-phone"/></svg>Call</a>
+  <a class="wa-link" href="#contact" target="_blank" rel="noopener"><svg class="ico"><use href="#i-chat"/></svg>WhatsApp</a>
+  <a class="go" href="#contact"><svg class="ico"><use href="#i-mail"/></svg>Enquire</a>
+</nav>
+
 <script>
-  const t=document.querySelector('.menu-toggle'),l=document.getElementById('links');
-  t.addEventListener('click',()=>{const o=l.classList.toggle('open');t.setAttribute('aria-expanded',o)});
-  l.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{l.classList.remove('open');t.setAttribute('aria-expanded',false)}));
-  document.getElementById('yr').textContent=new Date().getFullYear();
-  const f=document.getElementById('enquiry'),note=document.getElementById('form-note');
-  f.addEventListener('submit',e=>{
-    e.preventDefault();
-    const d=new FormData(f);
-    if(!d.get('name')||!d.get('phone')){note.textContent='Please add your name and phone number.';note.style.color='#C41E3A';return;}
-    const to=document.querySelector('.details a[href^="mailto:"]').href.replace('mailto:','');
-    const body=`Name: ${d.get('name')}\nPhone: ${d.get('phone')}\nEmail: ${d.get('email')}\n${d.get('type')}\n\n${d.get('message')}`;
-    location.href=`mailto:${to}?subject=${encodeURIComponent('Website enquiry: '+d.get('type'))}&body=${encodeURIComponent(body)}`;
-    note.textContent='Opening your email app…';note.style.color='';
+(() => {
+  const $ = (s, r = document) => r.querySelector(s);
+  const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Contact details come from the Contact section, so they only need editing there.
+  const EMAIL = $('.details a[href^="mailto:"]').href.replace('mailto:', '');
+  const WA_NUMBER = $('.details a[href^="tel:"]').href.replace(/\D/g, '');
+  const waUrl = text => `https://wa.me/${WA_NUMBER}${text ? '?text=' + encodeURIComponent(text) : ''}`;
+  $$('.wa-link').forEach(a => a.href = waUrl('Hello Aster Consultancy, I would like to know more about your services.'));
+
+  $('#yr').textContent = new Date().getFullYear();
+
+  // Mobile menu
+  const toggle = $('.menu-toggle'), links = $('#links');
+  const setMenu = open => {
+    links.classList.toggle('open', open);
+    toggle.setAttribute('aria-expanded', open);
+    toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    $('use', toggle).setAttribute('href', open ? '#i-close' : '#i-menu');
+  };
+  toggle.addEventListener('click', () => setMenu(!links.classList.contains('open')));
+  $$('a', links).forEach(a => a.addEventListener('click', () => setMenu(false)));
+  addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+
+  // Scroll: header shadow, progress bar, back-to-top
+  const hdr = $('#hdr'), bar = $('.progress'), top = $('#to-top');
+  const onScroll = () => {
+    const y = scrollY, max = document.documentElement.scrollHeight - innerHeight;
+    hdr.classList.toggle('scrolled', y > 10);
+    bar.style.transform = `scaleX(${max > 0 ? y / max : 0})`;
+    top.classList.toggle('show', y > 700);
+  };
+  addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+  top.addEventListener('click', () => scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' }));
+
+  // Active nav link
+  const navMap = new Map($$('a[href^="#"]', links).filter(a => a.hash.length > 1).map(a => [a.hash.slice(1), a]));
+  const spy = new IntersectionObserver(entries => entries.forEach(en => {
+    if (en.isIntersecting && navMap.has(en.target.id)) {
+      navMap.forEach(a => a.classList.remove('active'));
+      navMap.get(en.target.id).classList.add('active');
+    }
+  }), { rootMargin: '-45% 0px -50% 0px' });
+  navMap.forEach((_, id) => { const s = document.getElementById(id); if (s) spy.observe(s); });
+
+  // Reveal on scroll
+  const rev = new IntersectionObserver(entries => entries.forEach(en => {
+    if (en.isIntersecting) { en.target.classList.add('in'); rev.unobserve(en.target); }
+  }), { threshold: .12 });
+  $$('.reveal').forEach((el, i) => { el.style.transitionDelay = `${(i % 4) * 70}ms`; rev.observe(el); });
+
+  // Count-up stats
+  const counter = new IntersectionObserver(entries => entries.forEach(en => {
+    if (!en.isIntersecting) return;
+    const el = en.target, end = +el.dataset.count, t0 = performance.now();
+    counter.unobserve(el);
+    if (reduce) return;
+    const tick = t => { const p = Math.min((t - t0) / 1200, 1); el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3))); if (p < 1) requestAnimationFrame(tick); };
+    requestAnimationFrame(tick);
+  }), { threshold: .6 });
+  $$('[data-count]').forEach(el => counter.observe(el));
+
+  // Rotating hero word
+  const rot = $('#rot'), words = ['people', 'doctors', 'nurses', 'HR leaders', 'teams'];
+  if (!reduce) {
+    let i = 0;
+    setInterval(() => {
+      rot.classList.add('out');
+      setTimeout(() => { i = (i + 1) % words.length; rot.textContent = words[i]; rot.classList.remove('out'); }, 350);
+    }, 2400);
+  }
+
+  // Hero screening card: ticks each check, then moves to the next profile
+  const profiles = [
+    { icon: '#i-heart', role: 'Staff nurse, ICU', meta: 'B.Sc Nursing · 5 yrs experience', tag: 'Healthcare', hot: true, reg: 'Nursing council registration' },
+    { icon: '#i-plus', role: 'Medical officer', meta: 'MBBS · 3 yrs experience', tag: 'Healthcare', hot: true, reg: 'Medical council registration' },
+    { icon: '#i-users', role: 'HR manager', meta: 'MBA HR · 8 yrs experience', tag: 'HR', hot: false, reg: 'Background check' },
+    { icon: '#i-brief', role: 'Sales executive', meta: 'Graduate · 2 yrs experience', tag: 'Corporate', hot: false, reg: 'Background check' },
+  ];
+  const vcProfile = $('#vc-profile'), vcChecks = $('#vc-checks'), checkItems = $$('li', vcChecks);
+  const vcFill = $('#vc-fill'), vcStep = $('#vc-step'), vcStatus = $('#vc-status');
+  const showProfile = p => {
+    $('#vc-icon').setAttribute('href', p.icon);
+    $('#vc-role').textContent = p.role;
+    $('#vc-meta').textContent = p.meta;
+    const tag = $('#vc-tag'); tag.textContent = p.tag; tag.classList.toggle('hot', p.hot);
+    checkItems[1].lastElementChild.textContent = p.reg;
+  };
+  const setStep = n => {
+    checkItems.forEach((li, i) => { li.classList.toggle('done', i < n); li.classList.toggle('doing', i === n); });
+    vcFill.style.width = `${n / checkItems.length * 100}%`;
+    vcStep.textContent = `Step ${n} of ${checkItems.length}`;
+    const ready = n === checkItems.length;
+    vcStatus.classList.toggle('ok', ready);
+    vcStatus.innerHTML = ready ? '<svg class="ico"><use href="#i-check"/></svg>Added to shortlist' : 'Screening';
+  };
+  if (reduce) setStep(checkItems.length);
+  else {
+    let pi = 0, step = 0;
+    setStep(0);
+    setInterval(() => {
+      step++;
+      if (step <= checkItems.length) return setStep(step);
+      if (step < checkItems.length + 3) return;
+      step = 0; pi = (pi + 1) % profiles.length;
+      vcProfile.classList.add('out'); vcChecks.classList.add('out');
+      setTimeout(() => { showProfile(profiles[pi]); setStep(0); vcProfile.classList.remove('out'); vcChecks.classList.remove('out'); }, 350);
+    }, 900);
+  }
+
+  // Industry tabs
+  const tabs = $$('[role="tab"]');
+  const selectTab = tab => {
+    tabs.forEach(t => {
+      const on = t === tab;
+      t.setAttribute('aria-selected', on);
+      t.tabIndex = on ? 0 : -1;
+      document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+    });
+  };
+  tabs.forEach((t, i) => {
+    t.addEventListener('click', () => selectTab(t));
+    t.addEventListener('keydown', e => {
+      const d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+      if (!d) return;
+      const next = tabs[(i + d + tabs.length) % tabs.length];
+      selectTab(next); next.focus();
+    });
   });
+
+  // Roles finder
+  const q = $('#role-q'), cards = $$('.role-card'), filters = $$('.filter');
+  const more = $('#role-more'), PREVIEW = 9;
+  let cat = 'all', expanded = false;
+  const applyFilter = () => {
+    const term = q.value.trim().toLowerCase();
+    const matches = cards.filter(c => (cat === 'all' || c.dataset.cat === cat) && c.textContent.toLowerCase().includes(term));
+    const limit = expanded || term || cat !== 'all' ? Infinity : PREVIEW;
+    cards.forEach(c => c.hidden = !matches.includes(c) || matches.indexOf(c) >= limit);
+    const shown = Math.min(matches.length, limit);
+    $('#role-empty').hidden = matches.length > 0;
+    $('#role-count').textContent = shown ? `Showing ${shown} of ${cards.length} role types` : '';
+    more.hidden = shown >= matches.length;
+    more.textContent = `Show all ${matches.length} roles`;
+  };
+  more.addEventListener('click', () => { expanded = true; applyFilter(); cards[PREVIEW]?.querySelector('.apply').focus({ preventScroll: true }); });
+  filters.forEach(f => f.addEventListener('click', () => {
+    cat = f.dataset.f;
+    filters.forEach(x => x.setAttribute('aria-pressed', x === f));
+    applyFilter();
+  }));
+  q.addEventListener('input', applyFilter);
+  applyFilter();
+
+  // Form
+  const form = $('#enquiry'), note = $('#form-note');
+  const setMode = mode => {
+    form.mode.value = mode;
+    $$('.mode-fields', form).forEach(g => g.hidden = g.dataset.for !== mode);
+  };
+  $$('input[name="mode"]', form).forEach(r => r.addEventListener('change', () => setMode(r.value)));
+  const goContact = () => document.getElementById('contact').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' });
+
+  $$('[data-mode]').forEach(a => a.addEventListener('click', () => setMode(a.dataset.mode)));
+  $$('[data-service]').forEach(b => b.addEventListener('click', () => {
+    setMode('employer');
+    form.service.value = b.dataset.service;
+    goContact();
+    setTimeout(() => form.elements.name.focus({ preventScroll: true }), 600);
+  }));
+  $$('.apply').forEach(b => b.addEventListener('click', () => {
+    setMode('candidate');
+    form.role.value = $('h3', b.closest('.role-card')).textContent;
+    goContact();
+    setTimeout(() => form.elements.name.focus({ preventScroll: true }), 600);
+  }));
+
+  const validate = () => {
+    const checks = [
+      [form.elements.name, v => v.trim().length > 1],
+      [form.phone, v => v.replace(/\D/g, '').length >= 10],
+      [form.email, v => !v || /^\S+@\S+\.\S+$/.test(v)],
+    ];
+    let first = null;
+    checks.forEach(([el, test]) => {
+      const ok = test(el.value);
+      el.closest('.field').classList.toggle('invalid', !ok);
+      el.setAttribute('aria-invalid', !ok);
+      if (!ok && !first) first = el;
+    });
+    if (first) { first.focus(); note.textContent = 'Please fix the highlighted fields.'; note.className = 'form-note'; note.style.color = '#C41E3A'; }
+    return !first;
+  };
+  $$('input', form).forEach(el => el.addEventListener('input', () => el.closest('.field')?.classList.remove('invalid')));
+
+  const compose = () => {
+    const d = new FormData(form), g = k => (d.get(k) || '').toString().trim();
+    const employer = g('mode') === 'employer';
+    const lines = [
+      `Name: ${g('name')}`, `Phone: ${g('phone')}`,
+      g('email') && `Email: ${g('email')}`, g('city') && `City: ${g('city')}`,
+      employer ? 'I am an employer looking to hire.' : 'I am a candidate looking for a job.',
+      ...(employer
+        ? [g('org') && `Organisation: ${g('org')}`, `Service: ${g('service')}`, g('positions') && `Positions: ${g('positions')}`]
+        : [g('role') && `Role wanted: ${g('role')}`, `Experience: ${g('exp')}`, g('qual') && `Qualification: ${g('qual')}`]),
+      g('message') && `\n${g('message')}`,
+    ].filter(Boolean);
+    const subject = employer ? `Hiring enquiry: ${g('service')}` : `Job application: ${g('role') || 'Candidate registration'}`;
+    return { subject, body: lines.join('\n') };
+  };
+  const done = how => { note.textContent = `Opening ${how}… If nothing happens, call us on the number above.`; note.className = 'form-note ok'; note.style.color = ''; };
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    if (!validate()) return;
+    const { subject, body } = compose();
+    location.href = `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    done('your email app');
+  });
+  $('#send-wa').addEventListener('click', () => {
+    if (!validate()) return;
+    const { subject, body } = compose();
+    open(waUrl(`${subject}\n\n${body}`), '_blank', 'noopener');
+    done('WhatsApp');
+  });
+})();
 </script>
 </body>
 </html>
