@@ -1,12 +1,13 @@
-Aster Consultancy Services website.
+Aster Consultancy Services (ACS) website. Incorporated 2023.
 
 Static site (plain HTML). Deployed on Render as a Static Site: build command empty, publish directory `.`
 
 ## Updating details
 - **Phone number:** open index.html, find `const PHONE = '';` near the top of the script at the bottom of the file, and add your number, e.g. `const PHONE = '+91 98765 43210';`. That turns on every Call and WhatsApp button. Until then they stay hidden.
 - **Email:** info@asterconsultancyservices.com appears in the top bar, contact section, footer and `const EMAIL`. Find and replace all of them.
-- **Services:** every service is listed in the "Services directory" section of index.html (one `<li>` per service), grouped by practice area.
+- **Services:** every service is listed in the "Services directory" section of index.html (one `<li>` per service), grouped by practice area in this order: 01 Recruitment, 02 Environmental & ESG, 03 Education & Accreditation, 04 Healthcare Certification & TPA, 05 Digital Marketing, Tech & AI, 06 Business Registration & Compliance.
 
 ## Images
-- Logo: `assets/img/thread 3d logo.jpeg` is the original. `logo.jpg`, `logo-160.png`, `icon-192.png` and `favicon-64.png` are web-sized copies made from it.
-- Photos in `assets/img/` come from Pexels (free for commercial use, no attribution required): photos 5738735, 31499386, 7581117, 7580638, 4930705, 35487002, 7947999, 7821708 and 6158914 on pexels.com. Replace them with real photos of your team and offices whenever you can.
+The site uses no photos, only the circular logo and icons.
+- `assets/img/thread 3d logo.jpeg` is the original logo.
+- `logo.jpg` (large), `logo-160.png` (header/footer), `icon-192.png` and `favicon-64.png` are circular web-sized copies made from it.
