@@ -241,17 +241,21 @@ section{padding:104px 0;position:relative}
 /* Card base */
 
 /* About */
-.about{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:28px 64px;align-items:stretch}
+.about-copy{align-self:center}
+.mv-card.mission{align-self:end}
+.about .pillars{margin-top:0}
+.about .pillars li{height:100%}
+.mv-card{display:flex;flex-direction:column;justify-content:center}
 .about-copy .lead{margin-top:18px}
 .about-copy .lead strong{color:var(--navy);font-weight:600}
-.pillars{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:30px}
+.pillars{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 .pillars li{display:flex;flex-direction:column;gap:2px;padding:18px;border-radius:18px;background:var(--navy);border:1px solid var(--navy);box-shadow:var(--shadow-sm)}
 .pillars .pi{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:rgba(255,255,255,.14);color:#FF9A91;margin-bottom:10px}
 .pillars .pi.blue{color:#A9BBFF}
 .pillars .pi .ico{width:20px;height:20px}
 .pillars b{font-family:var(--display);font-weight:600;color:#fff;font-size:.98rem}
 .pillars small{color:#C3CEF3;font-size:.82rem;line-height:1.4}
-.mv{display:grid;gap:16px}
 .mv-card{position:relative;overflow:hidden;border-radius:24px;padding:30px 30px 30px 96px;background:var(--white);border:1px solid var(--line);box-shadow:var(--shadow-sm)}
 .mv-card.dark{background:var(--navy);border-color:var(--navy);color:#fff}
 .mv-card.dark::after{content:"";position:absolute;right:-60px;top:-60px;width:180px;height:180px;border-radius:50%;border:30px solid rgba(255,255,255,.06)}
@@ -279,8 +283,10 @@ section{padding:104px 0;position:relative}
 .ds-field .ico{width:20px;height:20px;color:var(--blue);flex-shrink:0}
 .ds-field input{border:0;padding:15px 0;font-size:1rem;background:transparent;box-shadow:none!important}
 .ds-field:focus-within{box-shadow:0 0 0 4px rgba(255,255,255,.22)}
-.ds-pop{position:relative;display:flex;flex-wrap:wrap;align-items:center;gap:7px;padding:12px 6px 2px;font-size:.84rem;color:#9FB0EA}
-.ds-pop button{border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.06);color:#fff;border-radius:999px;padding:4px 12px;font-size:.82rem;cursor:pointer;transition:background .2s,color .2s}
+.ds-pop{position:relative;display:flex;flex-wrap:nowrap;align-items:center;gap:6px;padding:12px 6px 2px;font-size:.84rem;color:#9FB0EA;white-space:nowrap;overflow-x:auto;scrollbar-width:none}
+.ds-pop::-webkit-scrollbar{display:none}
+.ds-pop>*{flex-shrink:0}
+.ds-pop button{border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.06);color:#fff;border-radius:999px;padding:4px 11px;font-size:.8rem;cursor:pointer;transition:background .2s,color .2s}
 .ds-pop button:hover,.ds-pop button.on{background:#fff;color:var(--navy)}
 .dir-count{position:relative;font-size:.86rem;color:#fff;padding:6px 6px 0;font-weight:500}
 .dir-count:empty{display:none}
@@ -329,12 +335,13 @@ mark{background:#FFE58A;color:inherit;border-radius:3px;padding:0 2px}
 
 /* Why */
 .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.fact{border-radius:20px;padding:30px;position:relative;transition:border-color .3s,transform .3s,box-shadow .3s}
-.fact:hover{border-color:var(--line-2);transform:translateY(-3px);box-shadow:var(--shadow-sm)}
+.fact{border-radius:20px;padding:30px;position:relative;background:var(--navy);border:1px solid var(--navy);box-shadow:var(--shadow-sm);transition:border-color .3s,transform .3s,box-shadow .3s}
+.fact:hover{transform:translateY(-3px);box-shadow:0 20px 40px -20px rgba(15,42,133,.7)}
 .fact .icon{width:48px;height:48px;margin-bottom:18px}
-.fact:nth-child(even) .icon{background:var(--blue-soft);color:var(--blue)}
-.fact h3{font-size:1.06rem;font-weight:600;margin-bottom:8px}
-.fact p{color:var(--muted);font-size:.93rem}
+.fact .icon{background:rgba(255,255,255,.14);color:#FF9A91}
+.fact:nth-child(even) .icon{color:#A9BBFF}
+.fact h3{font-size:1.06rem;font-weight:600;margin-bottom:8px;color:#fff}
+.fact p{color:#C3CEF3;font-size:.93rem}
 
 /* Process */
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;counter-reset:s;position:relative}
@@ -460,7 +467,11 @@ footer a:hover,footer button.link:hover{color:var(--blue)}
   .steps{grid-template-columns:1fr 1fr;gap:40px 24px}
   .steps::before,.steps-line{display:none}
   .foot-grid{grid-template-columns:1fr 1fr}
-  .about{gap:36px}
+  .about{gap:16px}
+  .about-copy{order:1;margin-bottom:12px}
+  .about .pillars{order:2}
+  .mv-card.mission{order:3}
+  .mv-card.vision{order:4}
   .dir{grid-template-columns:1fr}
   .dir-tabs{position:static;display:flex;overflow-x:auto;gap:8px;padding-bottom:6px;scrollbar-width:thin}
   .dir-tab{flex-shrink:0;padding:7px 14px 7px 7px;border-color:var(--line);background:var(--white)}
@@ -703,23 +714,21 @@ footer a:hover,footer button.link:hover{color:var(--blue)}
         <span class="eyebrow">About Us</span>
         <h2>Your one-stop <em>consultancy partner.</em></h2>
         <p class="lead"><strong>Aster Consultancy Services (ACS)</strong> brings expert guidance for institutions, businesses and professionals under one coordinated team.</p>
-        <ul class="pillars">
-          <li><span class="pi"><svg class="ico"><use href="#i-shield"/></svg></span><b>Professionalism</b><small>Consistent quality standards</small></li>
-          <li><span class="pi blue"><svg class="ico"><use href="#i-handshake"/></svg></span><b>Integrity</b><small>Ethical &amp; confidential</small></li>
-          <li><span class="pi"><svg class="ico"><use href="#i-star"/></svg></span><b>Client Success</b><small>Practical, result-oriented</small></li>
-        </ul>
       </div>
-      <div class="mv reveal">
-        <div class="mv-card dark">
-          <span class="mv-ico"><svg class="ico"><use href="#i-target"/></svg></span>
-          <h3>Our Mission</h3>
-          <p>Reliable consultancy, compliance, accreditation and recruitment services that help organisations achieve sustainable growth and long-term success.</p>
-        </div>
-        <div class="mv-card dark">
-          <span class="mv-ico"><svg class="ico"><use href="#i-eye"/></svg></span>
-          <h3>Our Vision</h3>
-          <p>To become one of India's most trusted consultancy firms, delivering innovative, ethical and high-quality solutions.</p>
-        </div>
+      <div class="mv-card dark mission reveal">
+        <span class="mv-ico"><svg class="ico"><use href="#i-target"/></svg></span>
+        <h3>Our Mission</h3>
+        <p>Reliable consultancy, compliance, accreditation and recruitment services that help organisations achieve sustainable growth and long-term success.</p>
+      </div>
+      <ul class="pillars reveal">
+        <li><span class="pi"><svg class="ico"><use href="#i-shield"/></svg></span><b>Professionalism</b><small>Consistent quality standards</small></li>
+        <li><span class="pi blue"><svg class="ico"><use href="#i-handshake"/></svg></span><b>Integrity</b><small>Ethical &amp; confidential</small></li>
+        <li><span class="pi"><svg class="ico"><use href="#i-star"/></svg></span><b>Client Success</b><small>Practical, result-oriented</small></li>
+      </ul>
+      <div class="mv-card dark vision reveal">
+        <span class="mv-ico"><svg class="ico"><use href="#i-eye"/></svg></span>
+        <h3>Our Vision</h3>
+        <p>To become one of India's most trusted consultancy firms, delivering innovative, ethical and high-quality solutions.</p>
       </div>
     </div>
   </section>
