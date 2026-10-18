@@ -10,4 +10,4 @@ Static site (plain HTML). Deployed on Render as a Static Site: build command emp
 ## Images
 The site uses no photos, only the circular logo and icons.
 - `assets/img/thread 3d logo.jpeg` is the original logo.
-- `logo-512.png` (large), `logo-160.png` (header/footer), `icon-192.png` and `favicon-64.png` are circular "ACS" logos made from it.
+- `logo-512.png` (large), `logo-256.png` (header/footer), `icon-192.png` and `favicon-64.png` are circular "ACS" logos made from it.
