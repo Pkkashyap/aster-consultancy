@@ -14,7 +14,7 @@
 <link rel="apple-touch-icon" href="assets/img/icon-192.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"ProfessionalService","name":"Aster Consultancy Services","alternateName":"ACS","slogan":"Follow your dreams","foundingDate":"2023","description":"One-stop consultancy for Recruitment, Environmental & ESG, Education Accreditation, Healthcare Certifications, Digital Marketing, AI Automation and Business Registration & Compliance.","email":"info@asterconsultancyservices.com","logo":"assets/img/logo-512.png","areaServed":"IN","address":[{"@type":"PostalAddress","addressLocality":"Noida","addressRegion":"Uttar Pradesh","addressCountry":"IN"},{"@type":"PostalAddress","addressLocality":"Varanasi","addressRegion":"Uttar Pradesh","addressCountry":"IN"}]}
 </script>
@@ -36,8 +36,8 @@
   --red-soft:#FDECEA;
   --ok:#14915A;
   --grad:linear-gradient(100deg,var(--blue) 0%,#5B3FD6 55%,var(--red) 100%);
-  --display:"Poppins","Segoe UI",system-ui,sans-serif;
-  --body:"Inter","Segoe UI",system-ui,sans-serif;
+  --display:"Plus Jakarta Sans","Segoe UI",system-ui,sans-serif;
+  --body:"DM Sans","Segoe UI",system-ui,sans-serif;
   --radius:20px;
   --shadow:0 24px 50px -28px rgba(15,42,133,.35);
   --shadow-sm:0 10px 26px -18px rgba(15,42,133,.4);
@@ -45,16 +45,17 @@
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:100px;background:var(--white);overflow-x:clip}
 ::selection{background:var(--blue);color:#fff}
-body{font-family:var(--body);color:var(--text);background:var(--white);font-size:16.5px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:clip}
+body{font-family:var(--body);color:var(--text);background:var(--white);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:clip}
 img,svg{max-width:100%;display:block}
 a{color:inherit}
 button{font:inherit;color:inherit}
 [hidden]{display:none!important}
 :focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:6px}
 .wrap{width:min(1200px,100% - 40px);margin-inline:auto}
-h1,h2,h3,h4{font-family:var(--display);line-height:1.15;letter-spacing:-.02em;color:var(--navy);font-weight:700}
-h2{font-size:clamp(1.9rem,3.8vw,3rem);max-width:20ch}
-h1,h2{text-wrap:balance}
+h1,h2,h3,h4{font-family:var(--display);line-height:1.15;letter-spacing:-.025em;color:var(--navy);font-weight:700}
+h2{font-size:clamp(1.9rem,3.8vw,3rem);max-width:20ch;font-weight:800}
+h1,h2{text-wrap:balance;word-spacing:.06em}
+h3,h4,.btn,.nav-links a,.fb-tabs button,.hb-tile b,summary,.fl,.assure li,.brand-name,.sc-brand span,.pillars b,.dir-tab,.eyebrow,.pill b,.svc-link,.track li,.field,.seg label,.mbar a,.fb-pop button,.ds-pop button,.chips li,.sc-chip,.dp-group li,.fact p,.lead,p{word-spacing:.06em}
 h2 em{font-style:normal;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 .lead{font-size:1.06rem;color:var(--muted);max-width:58ch}
 .eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:var(--display);font-size:.78rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--red);margin-bottom:16px;padding:6px 14px;border-radius:999px;background:var(--red-soft)}
@@ -115,7 +116,7 @@ header.scrolled .logo{width:48px;height:48px}
 .hero-center>div{display:flex;flex-direction:column;align-items:center;max-width:100%}
 .pill{display:inline-flex;align-items:center;gap:10px;padding:6px 16px 6px 6px;border-radius:999px;background:var(--white);border:1px solid var(--line);box-shadow:var(--shadow-sm);font-size:.86rem;color:var(--muted);margin-bottom:26px}
 .pill b{white-space:nowrap;font-family:var(--display);font-weight:600;font-size:.7rem;letter-spacing:.12em;color:#fff;background:var(--red);border-radius:999px;padding:4px 11px}
-.hero h1{font-size:clamp(2.5rem,6vw,5.1rem);font-weight:700;max-width:16ch;letter-spacing:-.03em;line-height:1.08}
+.hero h1{font-size:clamp(2.5rem,6vw,5.2rem);font-weight:800;max-width:16ch;letter-spacing:-.04em;line-height:1.05}
 .rot{display:inline-block;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;transition:opacity .35s,transform .35s,filter .35s;padding:0 .04em .06em}
 .rot.out{opacity:0;transform:translateY(14px);filter:blur(8px)}
 .rot-wrap{position:relative;display:inline-block}
